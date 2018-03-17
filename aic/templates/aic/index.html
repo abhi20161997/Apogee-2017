@@ -1,0 +1,183 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="EN">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content = "AAPOGEE Innovation Challenge, an exceptional technical symposium, aims at quenching your thirst for hands-on experience in real life problems plaguing the industrial world.Organized in collaboration with various multinational companies, this event presents before you existing challenges faced by these companies who seek their solutions from you. These problems, which happen to be discipline specific (one need not belong to that discipline), are to be solved by participants in teams of 2-4 in a month."/>
+    <meta name = "keywords" content = "apogee, technical Festival, techfest, tech fest, bits pilani, apogee 2017, bits tech fest, bits fest, birla institute of technology and science,apogee innovation challenge,aic,aic2017"/>
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="copyright" content="Copyright © 2017 Department Of Visual Media, BITS Pilani">
+    <meta name="author" content="Department Of Visual Media, BITS Pilani">
+    <meta name="email" content="webmaster@bits-apogee.org">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="Global">
+    <meta name="revisit-after" content="1 days">
+
+    <title>Apogee Innovation Challenge 2017</title>
+    <script src="{% static 'aic/js/jquery.min.js' %}" charset="utf-8"></script>
+    <script src="{% static 'aic/js/jquery.scrollify.min.js' %}" charset="utf-8"></script>
+    <script src="{% static 'aic/js/bootstrap.min.js' %}" charset="utf-8"></script>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{% static 'aic/css/main.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  </head>
+  <body>
+    <section id="nav">
+      <ul>
+        <li><span>Home</span></li>
+        <li class="lightboxli"><span>Overview</span></li>
+        <li class="lightboxli"><span>Rules</span></li>
+        <!-- <li class="lightboxli"><span>Sponsor</span></li> -->
+        <li class="lightboxli"><span>FAQs</span></li>
+        <li class="lightboxli"><span>Contact</span></li>
+        <li class="lightboxli"><span>Register</span></li>
+      </ul>
+    </section>
+    <section id="main">
+      <section id="landing" class="snappyscroll">
+        <div id="hamburger">
+          <span></span>
+        </div>
+        <div class="conveyor-wrapper">
+          <div class="ball"></div>
+          <div class="belt">
+            <div class="roller"><hr></div>
+            <div class="roller"><hr></div>
+          </div>
+        </div>
+        <div class="aicFadeIn">
+          APOGEE Innovation Challenge
+        </div>
+        <div class="landing-buttons">
+          <a href="#statements">
+            <button class="seeps white" style="calc(50vh + 6.5em);">See Problem Statements</button>
+          </a>
+           <a href="#statements">
+            <button class="seeps white open-reg" style="calc(50vh + 6.5em);">Register or Submit</button>
+          </a>
+        </div>
+        <div class="aic-wrapper">
+          <div class="letter">a</div>
+          <div class="letter" id="letterI">I</div>
+          <div class="letter">c</div>
+        </div>
+      </section>
+      <section id="statements" class="snappyscroll">
+        <div class="col-xs-6 col-sm-4 top statementopener" style="background: orange">
+          <div class="sprite">
+            <div class="upper" style="background-image: url({% static 'aic/images/qwikcilver.png' %})">
+
+            </div>
+            <div class="lower">
+              <div class="wrapper">
+                <h1>QwikcilverWoohoo</h1>
+                <button type="button" class="seeps">Show Problem Statement</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 top statementopener" style="background: yellow">
+          <div class="sprite">
+            <div class="upper" style="background-image: url({% static 'aic/images/generalelectric.png)'%}">
+
+            </div>
+            <div class="lower">
+              <div class="wrapper">
+                <h1>GE Healthcare</h1>
+                <button type="button" class="seeps">Show Problem Statement</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 top statementopener" style="background: orange">
+          <div class="sprite">
+            <div class="upper" style="background-image: url({% static 'aic/images/udlabs.png' %})">
+
+            </div>
+            <div class="lower">
+              <div class="wrapper">
+                <h1>UD Lab</h1>
+                <button type="button" class="seeps">Show Problem Statement</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden-xs col-sm-12 statement inactive">
+          Statements
+        </div>
+        <div class="col-xs-6 col-sm-4 bottom statementopener" style="background: yellow">
+          <div class="sprite">
+            <div class="upper" style="background-image: url({% static 'aic/images/morganstanley.png' %})">
+
+            </div>
+            <div class="lower">
+              <div class="wrapper">
+                <h1>Morgan Stanley</h1>
+                <button type="button" class="seeps">Show Problem Statement</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 bottom statementopener" style="background: orange">
+          <div class="sprite">
+            <div class="upper" style="background-image: url({% static 'aic/images/stride.png' %})">
+
+            </div>
+            <div class="lower">
+              <div class="wrapper">
+                <h1>Stride</h1>
+                <button type="button" class="seeps">Show Problem Statement</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 bottom statementopener" style="background: yellow">
+          <div class="sprite">
+            <div class="upper" style="background-image: url({% static 'aic/images/rollsroyce.png' %})">
+
+            </div>
+            <div class="lower">
+              <div class="wrapper">
+                <h1>Rolls-Royce</h1>
+                <button type="button" class="seeps">Show Problem Statement</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <div class="clearfix"></div>
+    <div class="overlay"></div>
+    <div class="lightbox">
+      <span class="close"></span>
+      <div class="content">
+        <div class="container">
+         
+          
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    $(function() {
+      $.scrollify({
+        //section : "section",
+      });
+    });
+  </script>
+  <script src="{% static 'aic/js/hamburger.js' %}" charset="utf-8"></script>
+  <!--script sr{% static 'aic/c="js/scroll.js" charset="utf-8"></script-->
+  <script src="{% static 'aic/js/statements.js' %}" charset="utf-8"></script>
+  <script src="{% static 'aic/js/lightbox.js' %}" charset="utf-8"></script>
+</html>

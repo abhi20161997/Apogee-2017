@@ -1,0 +1,127 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>APOGEE MAIN</title>
+	<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/normalize.css' %}">
+	<style>
+	.search-wrapper{
+		display: none;
+	}
+	</style>
+</head>
+<body>
+<div class="search-input">
+<input id="fuzzy-search"></input>
+<div class="search-wrapper events">
+<h2>Events</h2>
+<div class="search-results "> </div>
+</div>
+<div class="search-wrapper menu">
+<h2>Menu</h2>
+<div class="search-results "> </div>
+</div>
+</div>
+<script type="text/javascript" src="{% static 'main/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'main/js/fuse.js' %}"></script>
+<script type="text/javascript">
+ 	var menu_list = [
+  {
+    "menu": "Exhibitions"
+  },
+  {
+    "menu": "Events"
+  },
+  {
+    "menu": "E Summit"
+  },
+  {
+    "menu": "Think Again"
+  },
+  {
+    "menu": "Workshop"
+  },
+  {
+    "menu": "Literary Fest"
+  },
+  {
+    "menu": "Prof Show"
+  },
+  {
+    "menu": "Schedule "
+  },
+  {
+    "menu": "Competition"
+  },
+  {
+    "menu": "Login"
+  },
+  {
+    "menu": "Search"
+  }
+]
+	var events_list = [
+	  {
+	    "tags": [
+	      
+	    ],
+	    "short_desc": "WITH JUST SCRAP, BUILD A BRIDGE THAT CAN BEAR MAXIMUM LOAD AND UNDERGOES MINIMUM DEFLECTION. YOU HAVE THE FREEDOM ON THE TYPE OF BRIDGE YOU CONSTRUCT. BE INNOVATIVE.",
+	    "id": 24,
+	    "name": "Krazy Bridge"
+	  },
+	  {
+	    "tags": [
+	      
+	    ],
+	    "short_desc": "CEA BRINGS YOU AN AUTOCAD BASED EVENT 'SHRISHTI' TO FLAUNT YOUR ARCHITECTURAL SKILLS. A FUN FILLED EVENT WITH DESIGN PROBLEMS WHICH NEED YOUR TOUCH OF CREATIVITY.",
+	    "id": 25,
+	    "name": "Shrishti"
+	  },
+	  {
+	    "tags": [
+	      
+	    ],
+	    "short_desc": "Innover is a product design and development event that centres around the re-invention and marketing strategy to replace already existing product. This year theme is \"Smart-Cycle\".",
+	    "id": 59,
+	    "name": "Innover"
+	  },
+	  {
+	    "tags": [
+	      
+	    ],
+	    "short_desc": "A battle between the Kings to gain total control over waters of the world.",
+	    "id": 67,
+	    "name": "Battle of Waterloo"
+	  }
+	]
+
+	var event_search_options = {	keys: ['name','tags','category'],threshold:0.4};
+	var menu_search_options = {	keys: ['menu'],threshold:0.4};
+	var event_search = new Fuse(events_list, event_search_options);
+	var menu_search = new Fuse(menu_list, menu_search_options);
+	$('input').on('change',function(){
+		$('.search-results').html('')
+		var search_key=$(this).val();
+		var ev_result = event_search.search(search_key);
+		var menu_result = menu_search.search(search_key);
+		if(ev_result.length==0)
+			$('.search-wrapper.events').hide();
+		else
+			$('.search-wrapper.events').show();
+		if(menu_result.length==0)
+			$('.search-wrapper.menu').hide();
+		else
+			$('.search-wrapper.menu').show();
+
+		ev_result.map(function(ele){
+			$('.events .search-results').append('<p>'+ele.name+'</p>')
+		})
+		menu_result.map(function(ele){
+			$('.menu .search-results').append('<p>'+ele.menu+'</p>')
+		})
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+@media screen and (max-width: 500px){
+    .pages{
+        right: -100%;
+        width: 100%;
+        z-index: 930;
+    }
+    .back-img {
+        top:3%;
+        left:5%;
+    }
+
+    
+}
+
+
+@media screen and (max-width : 700px){
+    .social{
+        display:none;
+    }
+
+    .mob-nav-wrap{
+        display: flex;
+    }
+
+    .ham{
+        display: block;
+        /* position: absolute; */
+        margin: 0.8em;
+        right: 0;
+    }
+
+  
+    ul.main-nav{
+        display: none !important;
+    }
+
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-item-value {
+        margin: 0;
+        margin-top: 0.4em;
+    }
+
+    #bank-details-form .input-field {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #bank-details-form .input-field input {
+        margin-top: 0.6em;
+        width: 100%;
+    }
+
+    .dashboard-content.profile > div {
+        padding: 0;
+        padding-right: 16px;
+    }
+
+  
+
+    h3.big-title {
+        font-size: 1.2em;
+    }
+
+    .dashboard-tabs li {
+        padding: 6px 5px;
+        flex: 1;
+    }
+
+    .dashboard-tabs {
+        margin-top: 12px;
+    }
+}
+
+
+@media screen and (min-width : 700px){
+    .mob-nav{
+        display: none !important;
+    }
+}

@@ -1,0 +1,145 @@
+.row {
+    text-align: center;
+    font-family: 'Ubuntu',sans-serif;
+    color: white;
+}
+
+.pp-row {
+    margin-bottom: 25px;
+}
+
+.pp-container {
+    font-family: sans-serif;
+    width: 80vw;
+    margin: 10vh auto;
+}
+
+.letters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    line-height: 1.3;
+    font-size: 1.2em;
+}
+
+.mask {
+    /*overflow: hidden;*/
+    text-transform: none;
+}
+
+.title {
+    font-size: 2.5em;
+}
+
+.info {
+    text-align: justify;
+    /* width: 88%; */
+    margin: 10px 0 10px 0;
+}
+
+.link > a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.link > a:hover {
+    color: #fff;
+}
+
+.link > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.link > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.link > a:after {
+    opacity: 0.2;
+    transform: scaleX(1);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.text1 {
+    width: 100%;
+}
+
+.text2 {
+    width: 100%;
+}
+
+.t1 {
+    text-align: right;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.t2 {
+    text-align: left;
+}
+
+.i1 {
+    clear: right;
+    text-align: right;
+}
+
+.i2 {
+}
+
+.l1 {
+    text-align: right;
+}
+
+.l2 {
+    text-align: left;
+}
+
+.ai1 {
+    float: left;
+}
+
+.ai2 {
+    float: right;
+}
+
+.attached-image {
+    max-width: 22%;
+    height: 190px;
+    /* float: right; */
+    margin: 0 35px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 8px!important;
+    }
+
+    .attached-image {
+        clear: both;
+        float: none!important;
+        max-width: 35vw;
+        /* margin: 0 auto; */
+    }
+}

@@ -1,0 +1,474 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TI Innovation Challenge | APOGEE 2017</title>
+		<link href="{% static 'tichallenge/css/style.css' %}" rel='stylesheet' type='text/css'>
+		<link href="{% static 'tichallenge/css/form.css' %}" rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,300,100' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://use.fontawesome.com/82656b8526.js"></script>
+		<style>
+		.info>table{
+			border-spacing: 0;
+		}
+		.info td,.info th{
+			vertical-align: top;
+			border: 1px solid #eee;
+			padding: 15px;
+			text-align: center;
+		}
+		</style>
+	</head>
+
+<body>
+
+<div class="header">
+	<div><a href="javascript: void(0)" onclick="home()">
+			<div id="head0" class="headele">
+				<p class="headtxt">Home</p>
+				<img class="headimg" src="{% static 'tichallenge/img/icons/icon1.png' %}">
+			</div>
+	</a></div>
+	<div><a href="javascript: void(0)" onclick="curr=1; headexp()">
+			<div id="head0" class="headele">
+				<p class="headtxt">Robotics</p>
+				<img class="headimg" src="{% static 'tichallenge/img/icons/web.png' %}">
+			</div>
+	</a></div>
+	<div><a  href="javascript: void(0)" onclick="curr=2; headexp()">
+		<div id="head1" class="headele">
+			<p class="headtxt" style="top:-10px" >TI <br>Challenge</p>
+			<img class="headimg" src="{% static 'tichallenge/img/icons/chal.png' %}">
+		</div>
+	</a></div>
+	<div><a  href="javascript: void(0)" onclick="curr=3; headexp()">
+		<div id="head2" class="headele">
+			<p class="headtxt" >Rules</p>
+			<img class="headimg" src="{% static 'tichallenge/img/icons/rules.png' %}">
+		</div>
+	</a></div>
+	<div><a  href="javascript: void(0)" onclick="curr=4; headexp()">
+		<div id="head3" class="headele">
+			<p class="headtxt" style="top:-10px">Sponsor</p>
+			<img class="headimg" src="{% static 'tichallenge/img/icons/ti.png' %}">
+		</div>
+	</a></div>
+	<div><a  href="javascript: void(0)" onclick="curr=5; headexp()">
+		<div id="head4" class="headele">
+			<p class="headtxt">FAQs</p>
+			<img class="headimg" src="{% static 'tichallenge/img/icons/faq.png' %}">
+		</div>
+	</a></div>
+	<div><a  href="javascript: void(0)" onclick="curr=6; headexp()">
+		<div id="head5" class="headele">
+			<p class="headtxt" style="font-size:20px;">Register</p>
+			<img class="headimg" src="{% static 'tichallenge/img/icons/reg.png' %}">
+		</div>
+	</a></div>
+	<div><a  href="javascript: void(0)" onclick="curr=7; headexp()">
+		<div id="head6" class="headele">
+			<p class="headtxt" style="font-size:20px;">Contact Us</p>
+			<img class="headimg" src="{% static 'tichallenge/img/icons/phone.png' %}">
+		</div>
+	</a></div>
+</div>
+
+<div class="home">
+	<div id="dim">
+	<div id="hideToggle" style="display:none;">
+		<img src="{% static 'tichallenge/img/aplogo171.png' %}" class="aplogo">
+		<img src="{% static 'tichallenge/img/Texas-Instruments-Logo.png' %}" class="mainlog">
+		<div class="prsnts">presents</div>
+		<div class="hdtxt">robo-TIC</div>
+	</div>
+	</div>
+</div>
+
+<div id="content1" class="content">
+	<a href="javascript: void(0)" onclick="home()"><p class="close"> X </p></a>
+	<div class="scroller">
+		<br>
+		<div class="title_head">Robotics</div>
+		<div>
+		<div class="quote">
+			“Personally, I am not afraid of a robot uprising. The benefits far outweigh the threats”                      
+			</div>
+			<div style="margin-top:10px;text-align:right">- Daniel H. Wilson
+(Author, Robocalypse)</div>
+			<br><br>
+<p>
+Robotics is the interdisciplinary branch of engineering and science that includes mechanical engineering, electrical engineering, computer science, and others. Robotics deals with the design, construction, operation, and use of robots, as well as computer systems for their control, sensory feedback, and information processing. These technologies are used to develop machines that can substitute for humans. Robots can be used in any situation and for any purpose, but today many are used in dangerous environments (including bomb detection and de-activation), manufacturing processes, or where humans cannot survive.
+
+</p><p>
+From Industrial Manufacturing to the medical field robots are being used. The benefits of robots have increased their flexibility with being capable of performing a variety of tasks and applications.</p>
+		</div>
+	</div>
+</div>
+
+<div id="content2" class="content">
+	<a href="javascript: void(0)" onclick="home()"><p class="close"> X </p></a>
+	<div class="scroller">
+		<br>
+		<div class="title_head">Texas Instruments Challenge</div>
+		<div>
+			<p>TI Innovation Challenge is a one-of-a-kind platform where participants will get all the required tools from Texas Instruments to give a real form to their creative solutions pertaining to the field of <strong>ROBOTICS.</strong> </p>
+			<p>The uniqueness and beauty of this challenge is that there will not be a particular problem statement. The teams can ideate a ROBOTICS solution in any of the facets of human life to make it simpler, easier, more convenient, or more systematic. The teams can explore their minds in a wide range of fields.
+</p>
+			<p>In the preliminary round, teams will have to submit their solution in a detailed written form on the online portal. The teams whose solutions are innovative and feasible will be selected for the final round. They will be provided a toolkit with all the necessary equipments to build a working prototype of their idea over a period of 25 days. The selected teams will present their prototypes at APOGEE-2017 before a panel of expert judges.</p>
+			<p>Each member of the winning team will be given TI’s smartwatch. So along with creating your own TI Innovation Challenge prototype you can get one created by the maestros! All the teams presenting their solutions in the final round will get certificates from TI and their own to-be Robotics device.
+</p>
+		</div>
+	</div>
+</div>
+
+<div id="content3" class="content">
+	<div id="rules2" class="rules">
+		<a id="home" href="javascript: void(0)" onclick="home()"><p class="close"> X </p></a>
+		<div class="scroller">
+			<div class="title_head">Rules</div>
+			<ul style="font-size: 1.0em;text-align:justify">
+				<li>Participants have to form teams of 2-4.</li>
+				<li>In the preliminary round, teams will have to register by submitting their solution in a detailed written form on the online portal by <b>1st March</b>.</li>
+				<li>The teams with innovative and feasible solutions will be selected for the final round. Results of the preliminary round will be announced online.</li>
+				<li>The selected teams will be provided a tool kit by TI containing all the necessary equipments to build an TI Innovation Challenge working prototype till 2nd March.</li>
+				<li>Use of non-TI processors will lead to disqualification.</li>
+				<li>The teamswill present their working prototype at APOGEE-2017 before a panel of expert judges.</li>
+				<li>Each member of the winning team will get TI's smartwatch. Apart from this, all the teams presenting their solution in the final round will get certificates from TI.</li>
+			</ul>
+		</div>	
+	</div>
+</div>
+
+<div id="content4" class="content">
+	<div id="rules3" class="rules">
+		<a id="home" href="javascript: void(0)" onclick="home()"><p class="close"> X </p></a>
+		<div class="scroller" style="text-align:center;">
+			<img src="{% static 'tichallenge/img/Texas-Instruments-Logo.png' %}" style="width:80%;max-width:500px;">
+			<p style="padding-top:20px;font-size:1.2em;text-align:center">We are honoured to have Texas Instruments as the event sponsor for TI Innovation Challenge 2017.</p>
+			<p style="padding-top:20px;font-size:1.2em;"><b>Texas Instruments</b>, a global semiconductor company operating in 35 countries, have over 30,000 employees who design, manufacture and sell analog and embedded processing chips with an aim to change the world through technology. At TI, they redefine what's possible and improve people's lives with their technologies that make cities smarter, cars safer, factories more automated and bring life-connected wearable products to make us healthier.</p>
+			<p style="padding-top:20px;font-size:1.2em;">Analysts estimate that over 50 billion devices will be connected to the Internet by 2020. In this exploding Internet of Things, users, things and cloud services connect using the Internet to enable new cases and models. TI is the only semiconductor company with all of the building blocks to enable the TI Innovation Challenge. TI makes developing applications easier with hardware, software, and support to get anything connected within the TI Innovation Challenge.</p>
+		</div>		
+	</div>
+</div>
+
+<div id="content5" class="content">
+
+	<div id="rules4" class="rules">
+		<a id="home" href="javascript: void(0)" onclick="home()"><p class="close"> X </p></a>
+		<div class="scroller">
+			<div class="title_head">FAQs</div>
+			<div style="font-size: 0.8em">
+				<p style="font-weight: bold;">1. Can teams be formed from different colleges or different years? </p>
+				<p style="padding-left:20px;">Yes</p>
+				<p style="font-weight: bold;">2. Is registration to be done before abstract submission? </p>
+				<p style="padding-left:20px;">No. Registration will be done along with abstract submission.</p>
+				<p style="font-weight: bold;">3. In what form is the abstract to be submitted? </p>
+				<p style="padding-left:20px;">The abstract should contain a detailed description on reason of choosing the idea, the need of the device and the step by step execution plan to build it. It may include designs, structures, tables, etc. It  will be a PDF file to be submitted on the online portal of APOGEE.</p>
+				<p style="font-weight: bold;">4. How will outstation students receive the tool kits?</p>
+				<p style="padding-left:20px;">The tool kits will be shipped to their respective places by the given date. They will have to make their own arrangements to reach Pilani at the time of APOGEE.</p>
+				<p style="font-weight: bold;">5. Can tools outside the tool kit be used for making the prototype? </p>
+				<p style="padding-left:20px;">The tool kit will contain a Launchpad. The Energia IDE software of TI can be downloaded freely from the website: <a href="http://www.energia.nu" style="color:#e4e446;" target="_blank">www.energia.nu</a>.</p>
+				<p style="font-weight: bold;">6. What will be the criteria for judgement?</p>
+				<p style="padding-left:20px;">For the preliminary round, solutions will be checked based on feasibility, uniqueness and scope of the idea. For the final round, solutions will be judged on the basis of implementation of the proposed plan and innovative use of tools.</p>
+				<!-- 	COMING SOON! -->
+			</div>
+		</div>
+	</div>
+</div>
+<div id="content6" class="content">
+	<a id="home" href="javascript: void(0)" onclick="home()"><p class="close"> X </p></a>
+	<div class="scroller2">
+		<div class="form">
+			<div class="title_head">Registration</div>
+			<!--<div style="font-size: 3em;font-weight:900;margin-top: 19%;text-align: center;position: relative;">watch for it... submission starts soon !</div>-->
+			<div class="info" style="font-size:1em; margin-top:30px" >
+				<div id="form_cont" class="form-style-5">
+ 				<form id="iotform">
+ 					<fieldset>
+ 						<legend><span class="number">1</span> Team Leader</legend>
+ 						<input id="gl-name" name="field2" required="" type="text"  placeholder="Name">
+ 						<input id="gl-phone" required="" type="text" name="field2" placeholder="Phone">
+ 						<input id="gl-email" required="" type="text" name="field2" placeholder="Email">
+ 						<div style="line-height:1.5em; text-align:left;">
+ 							<input class="college" type="radio" name="college0" onclick="bits(this)" data-key="l" checked /><span>BITS Pilani</span>
+ 							<input class="college" type="radio" name="college0" onclick="other_college(this)" data-key="l" /><span>Other, Specify </span>
+ 							<input id="gl-college" required type="text" style="display:none" value="BITS Pilani">
+ 						</div><br>
+ 						<label for="gl-yos">Year of Study</label>
+ 						<select id="gl-yos"  name="gl-yos" required="">
+ 							<option value="1">1</option>
+
+ 							<option value="2">2</option>
+
+ 							<option value="3">3</option>
+
+ 							<option value="4">4</option>
+
+ 							<option value="5">5</option>
+
+ 						</select>
+ 					</fieldset>
+ 					<fieldset>
+ 						<legend><span class="number">2</span> Members</legend>
+ 						<div class="members-wrapper" style="line-height:1.5em; text-align:left;">
+ 							<div class="mem-1-wrapper">
+ 								<div class="col-xs-12 form-subhead" style="padding-bottom:8px">Member 1
+ 								</div>
+ 								<div class="input-field col-sm-6">
+ 									<input id="mem-1-name" required type="text" placeholder="Name">
+ 								</div>
+ 								<div class="input-field col-sm-6">
+ 									<input id="mem-1-phone" required type="text" placeholder="Phone">
+ 								</div>
+ 								<div class="input-field col-sm-12">
+ 									<input id="mem-1-email" required type="text" placeholder="Email">
+ 								</div>
+ 								<div class="input-field col-sm-12">
+ 									<div style="line-height:1.5em; text-align:left;">
+ 										<input class="college" type="radio" name="college1" onclick="bits_mem(this)" data-key="1" checked><span>BITS Pilani</span>
+ 										<input class="college1" type="radio" name="college1" onclick="other_college_mem(this)" data-key="1"><span>Other, Specify</span>
+ 										<input id="mem-1-college" required type="text" style="display:none" value="BITS Pilani">
+ 									</div>
+ 									<br>
+ 								</div>
+ 								<div class="input-field col-sm-12">
+ 									<label for="mem-1-yos">Year of Study</label>
+ 									<select id="mem-1-yos" name="mem-1-yos" required="">
+ 										<option value="1">1</option>
+ 										<option value="2">2</option>
+ 										<option value="3">3</option>
+ 										<option value="4">4</option>
+ 										<option value="5">5</option>
+ 									</select>
+ 								</div>
+ 							</div>
+ 						</div>
+ 						<div class="pull-right add-member"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Member</div>
+ 					</fieldset>
+ 					<fieldset>
+ 						<legend><span class="number">3</span>Upload File</legend>
+ 						<span>
+ 							<input id="abstract-file" required="" type="file" value="File">
+ 						</span>
+ 					</fieldset>
+ 					<div class="error-box"></div>
+ 					<button type="submit" value="Register"  class="waves-effect red darken-3 btn submit-button">SUBMIT</button>
+ 				</form>
+ 			</div>
+			</div>		
+		</div>
+	</div>
+</div>
+
+<div id="content7" class="content">
+	<div id="rules5" class="rules">
+		<a id="home" href="javascript: void(0)" onclick="home()"><p class="close"> X </p></a>
+		<div class="scroller">
+		<div class="title_head">Contact Us</div>
+			<div style="font-size: 1.2em">
+				<br>
+				<span style="font-size:1.4em;font-weight: bold">Garv Sharma</span><br> +91-8003113704<br>
+				 garv24sharma@gmail.com<br><br><br><br>
+				<span style="font-size:1.4em;font-weight: bold">Shashwat Shivam Jha</span> <br> +91 8503858092<br> shashwat.jh@gmail.com
+			</div>		
+		</div>
+	</div>
+</div>
+
+
+<script src="{% static 'tichallenge/js/script.js' %}"></script>
+
+<script type="text/javascript">
+	    var members = 1;
+
+    $(".add-member").click(function() {
+        if(members < 3) {
+            members++;
+
+            var context = '<div class="mem-'+members+'-wrapper"><div class="col-xs-12 form-subhead" style="padding-bottom:8px">Member '+members+'<div class="pull-right"><i id="mem-'+members+'-delete" value="'+members+'" class="fa fa-times member-delete"></i></div></div><div class="input-field col-sm-6"><input id="mem-'+members+'-name" required type="text" placeholder="Name"></div><div class="input-field col-sm-6"><input id="mem-'+members+'-phone" required type="text" placeholder="Phone" ></div><div class="input-field col-sm-12"><input id="mem-'+members+'-email" required type="text" placeholder="Email" ></div><div class="input-field col-sm-12"><div style="line-height:1.5em; text-align:left;"><input class="college" type="radio" name="college'+members+'" onclick="bits_mem(this)" data-key="'+members+'" checked><span>BITS Pilani</span><input class="college'+members+'" type="radio" name="college'+members+'" onclick="other_college_mem(this)"  data-key="'+members+'"><span>Other, Specify</span><input id="mem-'+members+'-college" required type="text" style="display:none" value="BITS Pilani"></div><br></div><div class="input-field col-sm-12"><label for="mem-'+members+'-yos">Year of Study</label><select id="mem-'+members+'-yos" name="mem-'+members+'-yos" required=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div></div>';
+
+            $(".members-wrapper").append(context);
+
+            $("#mem-"+members+"-delete").click(function() {
+                var value = $(this).attr("value");
+                if(members == value) {
+                    $(".mem-"+value+"-wrapper").remove();
+                    members--;
+                };
+                if(members < 3) {
+            	$(".add-member").show();
+            	}
+                else
+                    alert("Delete members from the bottom of the list !");
+            });
+
+            if(members == 3) {
+                $(".add-member").hide();
+            }
+        }
+
+    });
+
+	var imgpre='/2017';
+
+    $("#iotform").submit(function(e) {
+        e.preventDefault();
+        if(validate_project_submit() == 0) {
+            $(".error-box").hide();
+            $(".submit-button").hide();
+
+            var datasend = collect_data();
+            // console.log(datasend);
+            $.ajax({
+                url: './submit/',
+                type: 'POST',
+                data: datasend,
+                cache : false,
+                dataType: 'html',
+                processData: false,
+                contentType: false,
+                success: function(res)
+                {
+                	var response = JSON.parse(res);
+                	if(parseInt(response.status))
+                	{
+                    	$("#form_cont").html("You have been successfully registered.");
+                	}
+                	else
+                		 $("#form_cont").html("You couldn't be registered. Please Try Again Later.");
+                }
+            });
+        }
+        else {
+        }
+    });
+
+    function other_college(key) {
+    	var member= key.getAttribute("data-key");
+    	var id='#g'+member+'-college';
+        $(id).val("");
+        $(id).show();
+    }
+
+    function bits(key) {
+    	var member= key.getAttribute("data-key");
+    	var id='#g'+member+'-college';
+        $(id).val("BITS Pilani");
+        $(id).hide();
+    }
+
+    function other_college_mem(key) {
+    	var member= key.getAttribute("data-key");
+    	var id='#mem-'+member+'-college';
+    	$(id).val("");
+        $(id).show();
+    }
+
+    function bits_mem(key) {
+    	var member= key.getAttribute("data-key");
+    	var id='#mem-'+member+'-college';
+        $(id).val("BITS Pilani");
+        $(id).hide();
+    }
+
+
+    var aicsol;
+
+    $("input#abstract-file").on('change', function(e) {
+        aicsol = e.target.files;
+    });
+
+
+    function collect_data() {
+        var data = new FormData() ;
+        data.append('gl_name', $("input#gl-name").val());
+        data.append('gl_phone', $("input#gl-phone").val());
+        data.append('gl_email', $("input#gl-email").val());
+        data.append('gl_college', $("input#gl-college").val());
+        data.append('gl_yos', $("#gl-yos option:selected").val());
+        console.log(data);
+
+        for(var z=1;z<=members;z++) {
+            data.append('mem-'+z+'-name', $("input#mem-"+z+"-name").val());
+            data.append('mem-'+z+'-phone', $("input#mem-"+z+"-phone").val());
+            data.append('mem-'+z+'-email', $("input#mem-"+z+"-email").val());
+            data.append('mem-'+z+'-college', $("input#mem-"+z+"-college").val());
+            data.append('mem-'+z+'-yos', $("#mem-"+z+"-yos option:selected").val());
+        }
+
+        $.each(aicsol, function(key, value)
+        {
+            data.append(key, value);
+        });
+        return data;
+    }
+
+
+
+
+    function validate_project_submit() {
+
+        var count = 0;
+        var errorText = "Following are the errors cited in the form. Please correct them before submitting... <br>";
+
+        // Check for email...
+        var re_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        var en_email1 = $("input#gl-email").val();
+
+        if(!(re_email.test(en_email1))) {
+            errorText += "<br>&bull;&nbsp;&nbsp;Team Leader's Email is invalid."
+            count++;
+        }
+        for(var i=1;i<=members;i++) {
+            if($("input#mem-"+i+"-email").val() != "") {
+                var tmp_email = $("input#mem-"+i+"-email").val();
+                if(!(re_email.test(tmp_email))) {
+                    errorText += "<br>&bull;&nbsp;&nbsp;Member "+i+"'s Email is invalid."
+                    count++;
+                }
+            }
+        }
+
+        // Check for phone...
+        var re_phone = /^([0-9]{10})$/i;
+        var en_phone1 = $("input#gl-phone").val();
+        if(!(re_phone.test(en_phone1))) {
+            errorText += "<br>&bull;&nbsp;&nbsp;Team Leaders's Phone no is invalid. Please enter a valid 10 digit mobile number."
+            count++;
+        }
+        for(var i=1;i<=members;i++) {
+            if($("input#mem-"+i+"-phone").val() != "") {
+                var tmp_phone = $("input#mem-"+i+"-phone").val();
+                if(!(re_phone.test(tmp_phone))) {
+                    errorText += "<br>&bull;&nbsp;&nbsp;Member "+i+"'s Phone no is invalid. Please enter a valid 10 digit mobile number."
+                    count++;
+                }
+            }
+        }
+
+        //format check
+        var file = $("input#abstract-file").val();
+        var extn = file.substring(file.lastIndexOf(".")+1);
+        if( extn != "PDF" && extn != "pdf" ) {
+            errorText += "<br>&bull;&nbsp;&nbsp;The abstract file can only be of PDF Format."
+            count++;
+        }
+
+        $(".error-box").html(errorText).fadeIn(400);
+        console.log(count);
+        return count;
+    }
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-9546354-3', 'auto');
+		  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

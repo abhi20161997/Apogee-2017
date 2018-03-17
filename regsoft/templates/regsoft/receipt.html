@@ -1,0 +1,99 @@
+{% load staticfiles %}
+<html>
+<head>
+	<title>RECEIPT | Controlz</title>
+</head>
+<body>
+<div id= "wrapper" style = "margin:auto; width: 100%;">
+<input type="button" value="Print" onclick="window.print()" style = "float: right;"/>
+<br><a align="centre" href = "{% url 'regsoft:controls home' %}"><strong>Go to Home</strong></a>
+<br>
+<img src = "{% static 'regsoft/img/apogee-logo-black.png' %}"  height="80" style = "margin-right: 20px;position: relative;left: 50%;margin-left: -125px;"><div id = "collegeName" style="background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle;">
+GL College Name: {{ leader.college.name }}
+</div>
+	
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Registration Fees: Rs. 900 | Rs. 800(online)
+	</div>
+
+
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Cash Given: {{ bill.given }}
+	</div>
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Balance: {{ bill.balance }}
+	</div>
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Demand Draft No.: {{ bill.draft_number }}
+	</div>
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Males : {{ males }}  |  Females : {{ females }}
+	</div>
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Online Paid:{{ online_paid }}
+	</div>
+	
+<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Total Amount: Rs. {{ bill.amount }}
+	</div>
+<div id = "Receipt" style="background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align:top;float:right;margin-top:-180px;">
+		Receipt: {{ bill.id }}
+	</div>
+<div id = "Receipt" style="background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align:top;float:right;margin-top:-220px;">
+		Group Code: {{ leader.regsoftdetails.group_code }}
+	</div>
+<div id="Signature" style="background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align:top;float:right;margin-top: -40px;margin-right: 20px;">
+		Signature
+	</div>
+
+	<br /><br />
+	<div>
+	</div>
+	<hr style = "border-bottom: 3px dashed #ccc;">
+
+<img src = "{% static 'regsoft/img/apogee-logo-black.png' %}"  height="80" style = "margin-right: 20px;position: relative;left: 50%;margin-left: -125px;"><div id = "collegeName" style="background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle;">
+
+	<div id = "collegeName" style="background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle;">
+		GL College Name: {{ leader.college }}
+	</div>
+	
+	
+	
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Registration Fees: Rs. 900 | Rs. 800(Online)
+	</div>
+
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Cash Given: {{ bill.given }}
+	</div>
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Balance: {{ bill.balance }}
+	</div>
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Demand Draft No.: {{ bill.draft_number }}
+	</div>
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Males : {{ males }}  |  Females : {{ females }}
+	</div>
+
+	<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Online Paid:{{online_paid}}
+	</div>
+	
+<div style = "background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align: middle; margin-top:10px;">
+		Total Amount: Rs. {{ bill.amount }}
+	</div>
+	<div id = "Receipt" style="background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align:top;float:right;margin-top:-180px;">
+		Receipt: {{ bill.id }}
+	</div>
+	<div id = "Receipt" style="background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align:top;float:right;margin-top:-220px;">
+		Group No.: {{ leader.regsoftdetails.group_code }}
+	</div>
+	<div id="Signature" style="background: #FFFFFF; height: 20px; color: #000000; font-size: 23px; padding: 10px; vertical-align:top;float:right;margin-top: -40px;margin-right: 20px;">
+		Signature
+	</div>
+	<br /><br />
+	<div>
+	</div>
+</body>
+<html>

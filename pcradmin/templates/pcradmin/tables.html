@@ -1,0 +1,35 @@
+{% extends "pcradmin/base.html" %}
+{% block body %}
+{%for table in tables %}
+<div>
+    <div class="container">
+    <div class="row">
+        <div class="twelve columns textcenter">
+            <h1>{{table.heading}}</h1>
+            <a href="{% url 'pcradmin:dashboard' %}" class="button button-primary">Dashboard</a>
+            <br>
+            <table class= "u-full-width">
+                <thead>
+                    {% for head in table.headers %}
+                    <th>{{head}}</th>
+                    {% endfor %}
+                </thead>
+                <tbody>
+                    {% for row in table.rows %}
+                        <tr>
+                            {% for data in row %}
+                                <td>{{data}}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        </form>
+
+    </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock body %}

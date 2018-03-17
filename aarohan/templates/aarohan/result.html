@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aarohan Results</title>
+<style type="text/css">
+	html, body{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		overflow-y: auto;
+		font-family: helvetica;
+	}
+	.form_div{
+		padding: 8px 0;
+
+	}
+	.abc{
+	    background: #136076;
+	    color: #fff;
+	    outline: none;
+	    padding: 5px 15px;
+	    user-select: none;
+	    border-radius: 5px;
+	    /* text-decoration: none; */
+	    border: 1px solid #444;
+	    cursor: pointer;
+	    font-weight: bold;
+	}
+	.tp{
+		display: none;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</head>
+<body>
+	<div style="width:100%;height:100%;background:url(http://bits-apogee.org/2016/static/aarohan/images/background.png) 100% 100%;position:fixed;top:0;left:0;">
+		<div style="height:100%;width:100%;background: rgba(26, 90, 128, 0.75);position: absolute;top: 0;">
+		<h1 align = "center" style="color:#eee;padding:50px;font-size: 3.75em;"><strong> Aarohan Results </strong></h1>
+		<form id="tp" action="." method="POST" style="text-align:center;padding:20px 30px;background:#eee;width:400px;left:0;right:0;margin:auto;border-radius:4px;">
+		{% if status == 0 %}
+		{% csrf_token %}
+		<div class="form_div">
+			
+				<strong>Enter your Roll no.</strong>
+				<input type="text" name="roll_no" style="padding: 3px 5px; border-radius: 2px;user-select:none; ">
+
+				<br>
+		</div>
+		<div class="form_div">
+		<button class="abc" id="form_submit" align="center">SUBMIT</button>
+		</div>
+		{% elif status == 1 %}
+			<h2>Congratulations {{ name }} !</h2><br><br>
+			 You have secured an All India Rank of {{air}}<br><br> <b>School Toppers</b> and <b>the finalists</b> of Aarohan Round Two have been notified. <br><br>
+			Please contact your school academic coordinator in case of any issue or drop us a mail at aarohan@bits-apogee.org <br><br>
+			Stay updated on our Facebook page for the key and solutions.
+			<br><br><br>
+		{% elif status == 2 %}
+			<div class="yo">
+			There seems to be a trouble. Please get in touch with us through aarohan@bits-apogee.org
+			<div onclick="blah();" style="color:#146278;text-align: center;font-size: 1.5em;cursor:pointer;font-weight: bold;padding-top:15px;">Click to Retry Again</div>
+			</div>
+			<div class="tp">
+				<div class="form_div">
+					
+						<strong>Enter your Roll no.</strong>
+						<input type="text" name="roll_no" style="padding: 3px 5px; border-radius: 2px;user-select:none; ">
+
+						<br>
+				</div>
+				<div class="form_div">
+				<button class="abc" id="form_submit" align="center">SUBMIT</button>
+				</div>
+
+			</div>
+		{% endif %}
+		<div class="form_div" style="text-align: center;min-height: 40px;padding-top:20px;">
+			<div class="fb-like" data-href="https://www.facebook.com/aarohan.bits" data-width="400" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+		</div>
+		</form>
+
+		<div style="color:#eee;text-align:center;margin: 10px 0;"> <strong>Department of External Affairs</strong>, BITS Pilani</div>
+		</div>
+	</div>
+	
+	<div id="fb-root"></div>
+	<script>
+		function blah(argument) {
+			// body...
+			$('.yo').hide();
+			$('.tp').show();
+		}
+
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1408730136090135";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+</body>
+</html>

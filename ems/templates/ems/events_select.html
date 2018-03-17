@@ -1,0 +1,43 @@
+{% extends "ems/base.html" %}
+{% block title %}
+    Login
+{% endblock title %}
+{% block sidebar_content %}
+
+{% endblock sidebar_content %}
+{% block main_content %}
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Select Event</h4>
+                            </div>
+                            <div class="content">
+                                <form action="." method="POST">
+                                {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <select class="form-control" name="event">
+                                                {% for event in events|dictsort:"name" %}
+\                                                        <option value="{{ event.id }}">{{ event.name }}</option>
+                                                {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-info btn-fill btn-block" name="save">GO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock main_content %}

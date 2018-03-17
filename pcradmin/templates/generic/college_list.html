@@ -1,0 +1,68 @@
+{% extends "pcradmin/base.html" %}
+{% block body %}
+<div>
+    <div class="container">
+    <div class="row">
+        <div class="twelve columns textcenter">
+            <h1>College List</h1>
+            <a href="{% url 'pcradmin:dashboard' %}" class="button button-primary">Dashboard</a>
+            {% if message %}
+                <h4>{{message}}</h4>
+            {% endif %}
+            <form action="{% url 'pcradmin:colleges' %}" method= 'POST' id="college merge">
+            	{% csrf_token %}
+                <table class= "u-full-width">
+                    <tbody>
+                        <tr>
+                            <th colspan="3">
+                                <input type="text" name="finalcollege" form="college merge" placeholder="College Name After Merging (Only alphanumeric characters, comma, and hiphen(-) are allowed.)" style="width:100%" required="" pattern="[\w\d\s\,]+">
+                            </th>
+                            <th colspan="2">
+                                <input type="submit" class="button" form="college merge" style="background-color:#00CC00;color:white;" value="Merge Colleges">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Select</th>
+                            <th>Name</th>
+                            <th>PCR Approved Participants</th>
+                            <th>Total Participants</th>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                    {% for college, count in object_list %}
+                    <tr>
+                        <td>
+                            <input type = 'checkbox' name='colleges' value="{{college.pk}}" form="college merge">
+                        </td>
+                        <td>
+                            <a href="{% url 'pcradmin:college parts' college.pk %}" class="button"> {{college.name}}</a>
+                        </td>
+                        <td>{{count}}</td>
+                        <td>{{college.participant_set.count}}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+            {% if is_paginated %}
+                <span class="page-current">
+                {% if page_obj.has_previous %}
+                    <form method="GET" action="." style="display: inline">
+                        <input type="number" name="page" value="{{ page_obj.previous_page_number }}" hidden>
+                        <button class="button" type="submit">Previous</button>
+                    </form>
+                {% endif %}
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                {% if page_obj.has_next %}
+                    <form method="GET" action="." style="display: inline">
+                        <input type="number" name="page" value="{{ page_obj.next_page_number }}" hidden>
+                        <button class="button" type="submit">Next</button>
+                    </form>
+                {% endif %}
+                </span>
+            {% endif %}
+        </div>   
+    </div>
+    </div>
+</div>
+{% endblock body %}

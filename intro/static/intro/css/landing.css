@@ -1,0 +1,1146 @@
+@font-face {
+    font-family: "MFred";
+    src:local("MFred"), url("./../fonts/MFred.woff2") format("woff2");
+}
+
+.loading-custom {
+    position: absolute;
+    font-family: 'MFred', sans-serif;
+    bottom: 25vh;
+    width: 100vw;
+    left: 0;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    color: #f0f0f0;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.loader-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #2d3a4a;
+}
+
+.loader-grid {
+    max-width: 397px;
+    width: calc(397em / 30);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tetris-wrapper {
+    /* width: 397px; */
+    /* height: 343px; */
+    width: calc(397em / 30);
+    height: calc(343em / 30);
+    max-width: 397px;
+    max-height: 343px;
+}
+
+.tetris {
+    position: absolute;
+    width: calc(397em / 30);
+    height: calc(343em / 30);
+    max-width: 397px;
+    max-height: 343px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* top: 21%; */
+}
+
+.overlay {
+    position: relative;
+    z-index: 9;
+    width: 0%;
+    height: 100%;
+    background: #FFF;
+}
+
+.block-1 {
+    background-image: url('../img/landing/tetrisb1-01.png');
+    animation-name: block1;
+    animation-duration: 1.17s;
+    animation-timing-function: linear;
+    transform-origin: calc(270.5em / 30) calc(318em / 30);
+}
+
+@keyframes block1 {
+    from {
+        transform: translate3d(0,-60vh,0) rotate(90deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate3d(0,-31.05vh,0) rotate(90deg);
+    }
+
+    51% {
+        transform: translate3d(0,-30.47vh,0) rotate(0deg);
+    }
+
+    95% {
+        transform: translate3d(0,-5vh,0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0,0,0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.block-2 {
+    background-image: url('../img/landing/tetrisb2-01.png');
+    animation-name: block2;
+    animation-duration: 1.17s;
+    animation-delay: 1.17s;
+    animation-timing-function: linear;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    transform-origin: calc(302.5em / 30) calc(288.5em / 30);
+}
+
+@keyframes block2 {
+    from {
+        transform: translate3d(0,-60vh,0) rotate(180deg);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translate3d(0,-42.63vh,0) rotate(180deg);
+    }
+
+    31% {
+        transform: translate3d(0,-42.05vh,0) rotate(90deg);
+    }
+
+    60% {
+        transform: translate3d(0,-25.26vh,0) rotate(90deg);
+    }
+
+    61% {
+        transform: translate3d(0,-24.68vh,0) rotate(0deg);
+    }
+
+    95% {
+        transform: translate3d(0,-5vh,0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0,0,0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.block-3 {
+    background-image: url('../img/landing/tetrisb3-01.png');
+    animation-name: block3;
+    animation-duration: 1.17s;
+    animation-delay: 1.41s;
+    animation-timing-function: linear;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    transform-origin: calc(103em / 30) calc(261em / 30);
+}
+
+@keyframes block3 {
+    from {
+        transform: translate3d(0,-60vh,0) rotate(-180deg);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translate3d(0,-42.63vh,0) rotate(-180deg);
+    }
+
+    31% {
+        transform: translate3d(0,-42.05vh,0) rotate(-90deg);
+    }
+
+    60% {
+        transform: translate3d(0,-25.26vh,0) rotate(-90deg);
+    }
+
+    61% {
+        transform: translate3d(0,-24.68vh,0) rotate(0deg);
+    }
+
+    95% {
+        transform: translate3d(0,-5vh,0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0,0,0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.block-4 {
+    background-image: url('../img/landing/tetrisb4-01.png');
+    animation-name: block4;
+    animation-duration: 0.62s;
+    animation-delay: 2.35s;
+    animation-timing-function: linear;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes block4 {
+    from {
+        transform: translate3d(0,-60vh,0) rotate(0deg);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translate3d(0,-30vh,0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0,0,0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.block-5 {
+    background-image: url('../img/landing/tetrisb5-01.png');
+    animation-name: block5;
+    animation-duration: 0.78s;
+    animation-delay: 3.14s;
+    animation-timing-function: linear;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes block5 {
+    from {
+        transform: translate3d(0,-60vh,0) rotate(0deg);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translate3d(0,-30vh,0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0,0,0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.block-6 {
+    background-image: url('../img/landing/tetrisb6-01.png');
+    animation-name: block6;
+    animation-duration: 1.02s;
+    animation-delay: 2.51s;
+    animation-timing-function: linear;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    transform-origin: calc(62em / 30) calc(172.5em / 30);
+}
+
+@keyframes block6 {
+    from {
+        transform: translate3d(0,-60vh,0) rotate(-90deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate3d(0,-31.05vh,0) rotate(-90deg);
+    }
+
+    51% {
+        transform: translate3d(0,-30.47vh,0) rotate(0deg);
+    }
+
+    95% {
+        transform: translate3d(0,-5vh,0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0,0,0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.block-7 {
+    background-image: url('../img/landing/tetrisb7-01.png');
+    animation-name: block7;
+    animation-duration: 0.78s;
+    animation-delay: 3.53s;
+    animation-timing-function: linear;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    transform-origin: calc(335.5em / 30) calc(113.5em / 30);
+}
+
+@keyframes block7 {
+    from {
+        transform: translate3d(0,-60vh,0) rotate(-90deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate3d(0,-31.05vh,0) rotate(-90deg);
+    }
+
+    51% {
+        transform: translate3d(0,-30.47vh,0) rotate(0deg);
+    }
+
+    95% {
+        transform: translate3d(0,-5vh,0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0,0,0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.block-8 {
+    background-image: url('../img/landing/tetrisb8-01.png');
+    animation-name: block8;
+    animation-duration: 1.17s;
+    animation-delay: 3.92s;
+    animation-timing-function: linear;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes block8 {
+    from {
+        transform: translate3d(-5vw,-60vh,0) rotate(0deg);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translate3d(-5vw,-25.26vh,0) rotate(0deg);
+    }
+
+    61% {
+        transform: translate3d(0,-24.68vh,0) rotate(0deg);
+    }
+
+    95% {
+        transform: translate3d(0,-5vh,0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0,0,0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.anim-container {
+    position: absolute;
+    top:0;
+    color: #fff;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    /* background: blueviolet; */
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Lato Black',sans-serif;
+    font-size: 800%;
+    font-family: 'MFred',sans-serif;
+    letter-spacing: 0.4em !important;
+    text-align: center;
+}
+
+.landing-letters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 8vw;
+}
+
+.landing-mask {
+    font-family: 'MFred',sans-serif;
+    /*top:70px;*/
+    /*transform: translateY(-70px);*/
+    position: absolute;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.5, 0, 0, 1);
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
+    /*transition: transform 10s cubic-bezier(0.5, 0, 0, 1);*/
+}
+
+.split-cont {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top:0;
+    background: url(../img/retrofuture.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.spblock-1 {
+    width: 100vw;
+    height: 70vh;
+    background: #2d3a4a;
+    animation-name: pushUp;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-duration: 1s;
+}
+
+@keyframes pushUp {
+    100% {
+        transform: translateY(-70vh);
+    }
+}
+
+.spblock-2 {
+    width: 100vw;
+    height: 30vh;
+    background: #2d3a4a;
+    animation-name: pushDown;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-duration: 1s;
+}
+
+@keyframes pushDown {
+    100% {
+        transform: translateY(30vh);
+    }
+}
+
+.lettera-0 {
+    animation-name: lettera0;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes lettera0 {
+    0.01% {
+        visibility: hidden;
+        transform: translate(-2.5em,-3em);
+    }
+
+    50% {
+        visibility: hidden;
+        transform: translate(-1.5em,-3em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-1.5em,-0.5em);
+    }
+}
+
+.lettera-0 > span {
+    animation-delay: 1s;
+}
+
+.lettera-1 {
+    /*transform: translate(-3.2em,3em);*/
+    animation-name: lettera1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes lettera1 {
+    0.01% {
+        visibility: visible;
+        transform: translate(-4em,2.5em);
+    }
+
+    50% {
+        transform: translate(-0.9em,2.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-0.9em,-0.5em);
+    }
+}
+
+.lettera-1 > span {
+}
+
+.lettera-2 {
+    /*transform: translate(-2.4em,0em);*/
+    animation-name: lettera2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes lettera2 {
+    0.01% {
+        visibility: visible;
+        transform: translate(0em,-0.5em);
+    }
+
+    50% {
+        transform: translate(-0.3em,-0.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-0.3em,-0.5em);
+    }
+}
+
+.lettera-2 > span {
+}
+
+.lettera-3 {
+    /*transform: translate(-1.6em,2em);*/
+    animation-name: lettera3;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes lettera3 {
+    0.01% {
+        visibility: hidden;
+        transform: translate(-3em,1.5em);
+    }
+
+    50% {
+        visibility: hidden;
+        transform: translate(0.3em,1.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(0.3em,-0.5em);
+    }
+}
+
+.lettera-3 > span {
+    animation-delay: 1s;
+}
+
+.lettera-4 {
+    /*transform: translate(-0.8em,-2em);*/
+    animation-name: lettera4;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    transform: translate(1.2em,-0.5em);
+}
+
+@keyframes lettera4 {
+    0.01% {
+        visibility: hidden;
+        transform: translate(2em,-2.5em);
+    }
+
+    50% {
+        visibility: hidden;
+        transform: translate(0.9em,-2.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(0.9em,-0.5em);
+    }
+}
+
+.lettera-4 > span {
+    animation-delay: 1s;
+}
+
+.lettera-5 {
+    /*transform: translate(0em,1em);*/
+    animation-name: lettera5;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    transform: translate(2em,-0.5em);
+}
+
+@keyframes lettera5 {
+    0.01% {
+        visibility: visible;
+        transform: translate(-2em,0.5em);
+    }
+
+    50% {
+        transform: translate(1.5em,0.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(1.5em,-0.5em);
+    }
+}
+
+.lettera-5 > span {
+}
+
+.letter-0 {
+    animation-name: letter0;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter0 {
+    0.01% {
+        visibility: hidden;
+        transform: translate(-2em,-2.5em);
+    }
+
+    50% {
+        visibility: hidden;
+        transform: translate(-4.2em,-2.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-4.2em,1em);
+    }
+}
+
+.letter-0 > span {
+    animation-delay: 1s;
+}
+
+.letter-1 {
+    /*transform: translate(-3.2em,3em);*/
+    animation-name: letter1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter1 {
+    0.01% {
+        visibility: visible;
+        transform: translate(-4.5em,3.5em);
+    }
+
+    50% {
+        transform: translate(-3.6em,3.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-3.6em,1em);
+    }
+}
+
+.letter-1 > span {
+}
+
+.letter-2 {
+    /*transform: translate(-2.4em,0em);*/
+    animation-name: letter2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter2 {
+    0.01% {
+        visibility: visible;
+        transform: translate(0.5em,0.5em);
+    }
+
+    50% {
+        transform: translate(-3em,0.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-3em,1em);
+    }
+}
+
+.letter-2 > span {
+}
+
+.letter-3 {
+    /*transform: translate(-1.6em,2em);*/
+    animation-name: letter3;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter3 {
+    0.01% {
+        visibility: hidden;
+        transform: translate(-1em,2.5em);
+    }
+
+    50% {
+        visibility: hidden;
+        transform: translate(-2.7em,2.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-2.7em,1em);
+    }
+}
+
+.letter-3 > span {
+    animation-delay: 1s;
+}
+
+.letter-4 {
+    /*transform: translate(-0.8em,-2em);*/
+    animation-name: letter4;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter4 {
+    0.01% {
+        visibility: hidden;
+        transform: translate(1em,-1.5em);
+    }
+
+    50% {
+        visibility: hidden;
+        transform: translate(-2.1em,-1.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-2.1em,1em);
+    }
+}
+
+.letter-4 > span {
+    animation-delay: 1s;
+}
+
+.letter-5 {
+    /*transform: translate(0em,1em);*/
+    animation-name: letter5;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter5 {
+    0.01% {
+        visibility: visible;
+        transform: translate(2em,1.5em);
+    }
+
+    50% {
+        transform: translate(-1.5em,1.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-1.5em,1em);
+    }
+}
+
+.letter-5 > span {
+}
+
+.letter-6 {
+    /*transform: translate(0.8em,-1em);*/
+    animation-name: letter6;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter6 {
+    0.01% {
+        visibility: hidden;
+        transform: translate(-4em,-2.5em);
+    }
+
+    50% {
+        visibility: hidden;
+        transform: translate(-0.9em,-2.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-0.9em,1em);
+    }
+}
+
+.letter-6 > span {
+    animation-delay: 1s;
+}
+
+.letter-7 {
+    /*transform: translate(1.6em,3em);*/
+    animation-name: letter7;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter7 {
+    0.01% {
+        visibility: visible;
+        transform: translate(3em,3.5em);
+    }
+
+    50% {
+        transform: translate(-0.3em,3.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(-0.3em,1em);
+    }
+}
+
+.letter-7 > span {
+}
+
+.letter-8 {
+    /*transform: translate(2.4em,-3em);*/
+    animation-name: letter8;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter8 {
+    0.01% {
+        visibility: hidden;
+        transform: translate(3.6em,-2.5em);
+    }
+
+    50% {
+        visibility: hidden;
+        transform: translate(0.3em,-2.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(0.3em,1em);
+    }
+}
+
+.letter-8 > span {
+    animation-delay: 1s;
+}
+
+.letter-9 {
+    /*transform: translate(3.2em,2em);*/
+    animation-name: letter9;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter9 {
+    0.01% {
+        visibility: visible;
+        transform: translate(-2.5em,2.5em);
+    }
+
+    50% {
+        transform: translate(0.9em,2.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(0.9em,1em);
+    }
+}
+
+.letter-9 > span {
+}
+
+.letter-10 {
+    /*transform: translate(4em,-1em);*/
+    animation-name: letter10;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    transform: translate(4em,0.5em);
+}
+
+@keyframes letter10 {
+    0.01% {
+        visibility: visible;
+        transform: translate(4em,-0.5em);
+    }
+
+    50% {
+        transform: translate(1.5em,-0.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(1.5em,1em);
+    }
+}
+
+.letter-10 > span {
+}
+
+.letter-11 {
+    /*transform: translate(1.6em,3em);*/
+    animation-name: letter11;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter11 {
+    0.01% {
+        visibility: visible;
+        transform: translate(0em,3.5em);
+    }
+
+    50% {
+        transform: translate(2.1em,3.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(2.1em,1em);
+    }
+}
+
+.letter-11 > span {
+}
+
+.letter-12 {
+    /*transform: translate(2.4em,-3em);*/
+    animation-name: letter12;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter12 {
+    0.01% {
+        visibility: hidden;
+        transform: translate(4.6em,-2.5em);
+    }
+
+    50% {
+        visibility: hidden;
+        transform: translate(2.7em,-2.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(2.7em,1em);
+    }
+}
+
+.letter-12 > span {
+    animation-delay: 1s;
+}
+
+.letter-13 {
+    /*transform: translate(3.2em,2em);*/
+    animation-name: letter13;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes letter13 {
+    0.01% {
+        visibility: visible;
+        transform: translate(-1em,2.5em);
+    }
+
+    50% {
+        transform: translate(3.3em,2.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(3.3em,1em);
+    }
+}
+
+.letter-13 > span {
+}
+
+.letter-14 {
+    /*transform: translate(4em,-1em);*/
+    animation-name: letter14;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    transform: translate(4em,0.5em);
+}
+
+@keyframes letter14 {
+    0.01% {
+        visibility: visible;
+        transform: translate(1em,-0.5em);
+    }
+
+    50% {
+        transform: translate(3.9em,-0.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate(3.9em,1em);
+    }
+}
+
+.letter-14 > span {
+}
+
+.enter-site {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    border: 2px solid #FFFFFF;
+    height: 50px;
+    line-height: 48px;
+    padding: 0 45px;
+    overflow: hidden;
+    color: #FFFFFF;
+    background: transparent;
+    -webkit-transition: color 400ms cubic-bezier(0.345, 0.005, 0.07, 1);
+    transition: background 400ms cubic-bezier(0.345, 0.005, 0.07, 1);
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    bottom: 15vh;
+}
+
+.enter-site:hover {
+    color: #2d3a4a;
+}
+
+.btn-bg {
+    height: 0;
+    left:-45px;
+    position: absolute;
+    width: calc(100% + 45px);
+    transition: height 400ms cubic-bezier(0.345, 0.005, 0.07, 1);
+    background: #FFF;
+    z-index: -1;
+}
+
+.btn-bg:hover {
+    height:100%;
+}
+
+/*#the {
+    position: fixed;
+     display: none; 
+    font-size: 0.6em;
+    text-align: center;
+    margin: 0.35em 0 0 0.65em;
+}*/
+/*#apogee > div {
+    animation-delay: 2s;
+    animation-name: push-apogee;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}*/
+/*@keyframes push-apogee {
+    0.01% {
+        visibility: visible;
+        transform: translateY(-0.5em);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateY1em);
+    }
+}
+*/
+/*#retrofuture {
+    animation-delay: 2s;
+    animation-name: push-retrofuture;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes push-retrofuture {
+    from {
+        transform: translateY(0em);
+    }
+    100% {
+        transform: translateY(0.5em);
+    }
+}*/
+/*#jaadu {
+    display: none;
+}*/
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 8px!important;
+    }
+
+    .text-wrapper {
+        font-size: 435%;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width: 800px) {
+    body {
+        font-size: 10px!important;
+    }
+
+    .text-wrapper {
+        font-size: 535%;
+    }
+}

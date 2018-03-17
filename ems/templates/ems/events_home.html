@@ -1,0 +1,123 @@
+{% extends "ems/base.html" %}
+{% block sidebar_content %}
+<li>
+    <a href="{% url 'ems:events_home' event.id %}">
+        <i class="pe-7s-news-paper"></i>
+        <p>Event Home</p>
+    </a>
+</li>
+{% if emsadmin %}
+<li>
+    <a href="{% url 'ems:events_levels' event.id %}">
+        <i class="pe-7s-news-paper"></i>
+        <p>Event Setup</p>
+    </a>
+</li>
+{% endif %}
+<li>
+    <a href="{% url 'ems:events_participants' event.id %}">
+        <i class="pe-7s-news-paper"></i>
+        <p>Manage Participants</p>
+    </a>
+</li>
+<li>
+    <a href="{% url 'ems:events_judge_home' event.id %}">
+        <i class="pe-7s-news-paper"></i>
+        <p>Judge Event</p>
+    </a>
+</li>
+{% endblock sidebar_content %}
+{% block sub_title %}
+    {{ event.name }}
+{% endblock sub_title %}
+{% block main_content %}
+        <div class="content">
+            <div class="container-fluid">
+            <form action="." method="POST">
+                {% for level in levels|dictsort:"position" %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">{{ level.position }}. {{ level.name }}</h4>
+                                <p class="category">The following particpants are currently in {{ level.name }} level of {{ event.name }}</p>
+                            </div>
+
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>Check</th>
+                                        <th>Edit</th>
+                                        <th>S.No</th>
+                                        {% if event.is_team %}
+                                        <th>Team Name</th>
+                                        <th>Team Leader</th>
+                                        <th>Members</th>
+                                        <th>Leader College</th>
+                                        {% else %}
+                                        <th>Name</th>
+                                        <th>College</th>
+                                        {% endif %}
+                                        <th>Comments</th>
+                                        <th>Rank</th>
+                                    </thead>
+                                    <tbody>
+                                    {% for team in level.teams.all %}
+                                    <tr>
+                                        <td>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="teams" value="{{ team.id }}" data-toggle="checkbox">
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <a href="{% url 'ems:events_teams_edit' event.id team.id %}" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>{{ forloop.counter }}</td>
+                                        {% if event.is_team %}
+                                        <td>{{ team.name }}</td>
+                                        <td>{{ team.leader.name }}</td>
+                                        <td>{{ team.members.all.count|add:1 }}</td>
+                                        {% else %}
+                                        <td>{{ team.leader.name }}</td>
+                                        {% endif %}
+                                        <td>{{ team.leader.college.name }}</td>
+                                        <td>{{ team.comments }}</td>
+                                        <td>{{ team.position }}</td>
+                                    </tr>
+                                    {% empty %}
+                                    <tr>
+                                        <td colspan="10" style="text-align:center">Nothing in here!</td>
+                                    </tr>
+                                    {% endfor %}
+                                    <tr>
+                                        <td colspan="10">
+                                            {% if level.name == 'Registered' %}<button type="submit" class="btn btn-info btn-fill" name="promote" value="{{ level.position }}">Promote</button>{% endif %}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </form>
+            </div>
+        </div>
+{% endblock main_content %}
+{% block script %}
+<script type= 'text/javascript'>
+function checkall(gauss){
+  var cbx = document.getElementsByTagName('input');
+  for(var i=0; i< cbx.length ; ++i)
+  {
+    if(cbx[i].type == 'checkbox')
+      cbx[i].checked = gauss.checked;
+
+  }
+}
+</script>
+{% endblock script %}

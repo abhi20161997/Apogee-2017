@@ -1,0 +1,79 @@
+{% extends "pcradmin/base.html" %}
+{% block head %}
+    <style type="text/css">
+        #id_events {
+            width: 100% !important;
+        }
+    </style>
+{% endblock head%}
+{% block body %}
+<div class="container">
+    <div class="row">
+
+        <div class="twelve columns textcenter">
+        <a href="{% url 'pcradmin:dashboard' %}" class="button button-primary">Dashboard</a>
+
+            <h1><strong>Participant Details </strong></h1>
+            <table class="u-full-width">
+                <thead>
+                    <tr>
+<!--                         <th><h5>Action</h5></th>
+                        <th><h5>Click! </h5></th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Name</strong></td>
+                        <td> {{object.name}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email</strong></td>
+                        <td>{{object.email}} </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phone</strong></td>
+                        <td> {{object.phone}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>College</strong></td>
+                        <td>{{object.college.name}} </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gender</strong></td>
+                        <td>{{object.gender}} </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Address</strong></td>
+                        <td> {{object.address}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Events</strong></td>
+                        <td> {% for k in object.events.all %}{{k.name}},{% endfor %}</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Team Names</strong></td>
+                        <td>{% for k in object.teams.all %}k.name,{% endfor %} </td>
+                    </tr>                                                                                                            
+                    <tr>
+                        <td><strong>Online Paid</strong></td>
+                        <td> {% if object.fee_paid %}Yes {% else %}No {% endif %}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bank name | ifsc code</strong></td>
+                        <td> {{object.bank_name}} | {{object.bank_ifsc}}</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Bank Account N.</strong></td>
+                        <td>{{object.bank_account_no}} </td>
+                    </tr>                                 
+
+                </tbody>
+            </table>
+            <br><a class="button" href="../logout/">Logout</a>
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock body %}

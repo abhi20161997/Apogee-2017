@@ -1,0 +1,625 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html class="fsvs no-js">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>AAROHAN 2017</title>
+	<link rel="stylesheet" href="{% static 'aarohan/css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'aarohan/css/default.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'aarohan/css/bookblock.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'aarohan/css/demo4.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'aarohan/css/demo.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'aarohan/css/component.css' %}" />
+	<link rel="shortcut icon" href="{% static 'aarohan/images/AarohanLogo0.png' %}" type="image/png">
+	<link rel="icon" href="{% static 'aarohan/images/AarohanLogo0.png' %}" type="image/png">
+
+	<script src="{% static 'aarohan/js/modernizr.custom.js' %}"></script>
+	<script src="{% static 'aarohan/js/jquery.min.js' %}"></script>
+	<script src="{% static 'aarohan/js/fsvs.js' %}"></script>
+
+	<script src="{% static 'aarohan/js/jquery.stickyheader.js' %}"></script>
+
+</head>
+
+<body>
+<!-- FB Script -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1317485434971089";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- Main body -->
+	<div id ="foot" >
+	
+	DOWNLOADS :&nbsp&nbsp&nbsp
+		<a href="{% static 'aarohan/files/brochure.pdf' %}" style="font-weight: bold;
+    color: #5f98f7;
+    ">BROCHURE&nbsp&nbsp</a>|&nbsp&nbsp
+		<a href="{% static 'aarohan/files/sample.pdf' %}" style="font-weight: bold;
+    color: #5f98f7;
+    ">SAMPLE QUESTION PAPER</a>&nbsp&nbsp
+		<div style="float: right;">
+			<div class="fb-like" data-href="https://www.facebook.com/aarohan.bits/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+		</div>
+
+	</div>
+	</div>
+	<div id="container">
+		<div class="header-left">
+			<ul>
+				<li id="navhome" style="cursor: pointer;"><a href="#slide-1"> <div class="ring"></div> <div class="fix"> HOME </div></a></li>
+				<li id="navtestimonial" style="cursor: pointer;"><a href="#slide-2"> <div class="ring"></div> <div class="fix"> CHALLENGE </div></a> </li>
+				<li id="navoverview" style="cursor: pointer;"><a href="#slide-3"> <div class="ring"></div> <div class="fix">OVERVIEW</div></a> </li>
+				<li id="navbraniac" style="cursor: pointer;"><a href="#slide-4"> <div class="ring"></div> <div class="fix"> ROUNDS</div></a></li>
+				<li id="navcodevoyage" style="cursor: pointer;"><a href="#slide-5"> <div class="ring"></div> <div class="fix"> TIMELINE</div></a> </li>
+				<li id="navapogee" style="cursor: pointer;"> <div class="ring"></div> <div class="fix"><a href="http://www.bits-apogee.org/"> APOGEE 2017</a> </div> </li>
+				<li id="navcontact" style="cursor: pointer;"><a href="#slide-6"> <div class="ring"></div> <div class="fix"> CONTACT </div></a> </li>
+
+			</ul>
+		</div> <!---header-left-->
+
+		<div class="nav-button"> &#9776; </div>
+		<div id="fsvs-body">
+			<div class="slide" >
+				
+				<div id="regsheet">
+					<h2>REGISTRATION SHEET</h2>
+					<div class="reglinks">
+					<a href="{% static 'aarohan/files/School_City_Class.xlsx' %}" class="regbuttons">DOWNLOAD</a>
+						&nbsp|&nbsp
+						<p class="regbuttons" id="uploadButton">UPLOAD</p>
+					</div>
+				
+				</div>
+
+				<div id="header" style="position: relative; margin:3%">
+
+
+					<div id="header-logo">				
+						<div class="headline"><img src="{% static 'aarohan/images/AarohanBranding.png' %}"></div>
+						<div class="content" style="color:#444;"> An Educational Initiative by BITS Pilani </div>
+					</div> 
+
+				</div> 
+				<div id="content" >
+					<div class="center-content">
+						<div class="center-upper">
+							<img src="{% static 'aarohan/images/home-image.png' %}" >
+						</div> 
+						<div class="center-bottom">
+							<ul>
+								<li> <div class="headline"> </div>
+									<div class="content" style="text-align:justify;"></div>
+								</li>
+								<li> <div class="headline"> Apogee 2017 </div>
+									<div class="content" style="text-align:justify;"> Apogee 2017, the latest edition of the biggest technical festival of India is set to be even bigger.Be a part of it ! </div>
+									<a href="./result/" target="_blank"><div style="letter-spacing:0.1em;margin:20px;padding: 12px 15px;background-color: #d81e28;color:#f0f0f0;font-weight: bold;border-radius: 3px; ">
+										Check Result
+									</div></a>
+								</li>
+								<li> <div class="headline" >  </div>
+									<div class="content" style="text-align:justify;"></div>
+								</li>
+							</ul>
+						</div> 
+					</div> 
+				</div> 
+				<div class="upload-wrapper">
+					<div class="overlay"></div>
+					<div class="form-wrap">
+					<div class="form-inner">
+						<h2>Upload Registration Sheet <span id="close">✖</span></h2>
+						<form id="uploadForm" >
+							<input type="file" id="uploadRegSheet" />
+							<button type="submit" id="uploadSumit">Submit</button>
+						</form>
+						<h3 id="message"></h3>
+					</div>
+					</div>
+				</div>
+			</div> 
+			<div class="slide"> 
+	     	<div id="container-sample">
+  			<ul>
+  			<li>
+  			<div class = "wrapper">
+       		<div class="headline" > <h1 style="color:white;font-size:50px; font-weight:bolder"> Sample Paper Challenge </h1> <p style="font-style:italic; color:white;font-size:18px;">"Try to love challenges. It will drive you towards success automatically." </p> </div><br><br>
+       		<div class="content" style="text-align:left; font-size:19px;color:white;"> With Aarohan taking a huge a leap forward in the present day education system through an "Out-of-the-Box" paper, we present to you a tinge of scientific curiosity coupled with an incentive you can't refuse. 
+			Its not just a test of wits. its a challenge. So bring out the scientist in you and take the<div class="content" style="text-align:left; font-size:19px;color:white; font-weight:bold;display:inline;"> Aarohan Sample Paper Challenge. </div><br><br>
+	 	   <div class = "content" style ="text-align:center;font-size:20px;font-weight:bold;color:white;" >
+			First student from each class (in their respective schools) to get all the answers correct gets to participate in Aarohan 2017 for free!<br><br><br>
+		    Take a Peek at Aarohan 2017-
+       		<a style="text-decoration:underline;font-size:20px" href="https://goo.gl/forms/WOy9QJgFaUeV45JL2 ">The Aarohan Sample Paper Challenge!</a>
+       		</div>
+			</div>
+			</div>
+			</li>
+			</ul>
+  			</div> 
+ 			 </div> 			
+
+
+			<div class="slide"> 
+	     	<div id="container-eventa">
+  			<ul>
+  			<li> <div class="wrapper">    
+       		<div class="headline"> <h1> Aarohan </h1> <p>A wonderful learning experience </p> </div>
+       		<div class="content" style="text-align:center;font-size:19px;"> The unique paper crafted by the students under the guidance of an expert panel of professors is designed to rekindle the much needed scientific curiosity. Topics near the boundaries of human scientific achievements would be explained in laymen terms and questions based on the students’ existing knowledge follow.
+   			Apart from a wonderful learning experience, theres a lot to win!<br><br>
+	 	   <div class = "content" style ="text-align:center;font-weight:bold;" >Certificates to all participants!<br><br>
+		   Prizes to school toppers!<br><br>
+       		Top 10 students get an all expense covered trip to APOGEE 2017 along with exiting prizes!<br><br> 
+       		</div>
+</div>
+</div>
+</li>
+</ul>
+  </div> 
+  </div> 
+			<div class="slide" style="color:white !important;">
+				<div id="container-school">
+					<div class="red-overlay" style="left:0%;">
+					</div>
+					<div class="red-overlay" style="right:0;width:51%;background:rgba(26, 90, 128, 0.75);">
+					</div>
+					<ul>
+						<li > 
+							<div class="left-pane-content"><div class="left-pane-image"> <img src="{% static 'aarohan/images/1.png' %}" style ="height:100px; width:100px">
+							</div><div class="headline" style="text-shadow: 1px 1px black;font-size:30px;"> Round 1 </div> 
+							<div class="content" style="text-align:justify;text-shadow: 1px 1px black;font-size:17px"> 
+							
+							The paper will be OMR based.<br><br>
+							The duration of the paper will be two hours.<br><br>
+							The paper will have one unifying theme based on recent scientific breakthroughs and phenomena, and the questions based on that will be entirely application based and not factual.<br><br>
+							The syllabus comprises of the syllabus of the students’ respective class. The students will have to get innovative with the basic formulae and improvise.<br><br>
+							The marking scheme will be revealed at the time of examination.<br><br>
+							
+						</li>
+						<li  style="left:5%"> 
+							<div class="left-pane-content">  <div class="left-pane-image"> <img style ="height:100px; width:100px"src="{% static 'aarohan/images/2.png' %}"></div><div class="headline" style="text-shadow: 1px 1px black;font-size:30px"> Round 2 </div> 
+							<div class="content" style="text-align:justify; text-shadow: 1px 1px black;font-size:17px">
+							Two students from each zone would be selected for the final round, that makes a total of 10 students.<br><br>
+							An all expense paid trip to BITS Pilani during APOGEE 2017, along with one guardian. Two day all access pass issued to all students.<br><br>
+							Each student would be given a particular scientific topic or a research area, one month prior to the second round. <br><br>
+							Students are supposed to gather knowledge, relevant data, notes, breakthroughs and current happenings related to that topic. Help from teachers is encouraged.<br><br>
+							Each student would have to present their topic which would be followed by 
+							constructive group discussion in the presence of a panel.<br><br>
+						</li>
+					</ul>
+					</div> 
+					</div> 
+			
+
+
+
+<div class="slide codevoyage"> 
+  <div id="container-eventb">
+  <ul>
+  <li> <div class="wrapper"> 
+      <div class="headline"> <h1> Timeline </h1> </div>
+       <div class="content" style="text-align:center;"> 
+       <div class="content" style="font-weight:bold;text-align:center;font-size:20px;">November:</div>Registration portal opens<br>
+       <div class="content" style="font-weight:bold;text-align:center;font-size:20px;">December 15 - January 10:</div>Round one at your school<br>
+       <div class="content" style="font-weight:bold;text-align:center;font-size:20px;">January:</div>Answer Keys with Solutions<br>
+       <div class="content" style="font-weight:bold;text-align:center;font-size:20px;">February:</div>AIRs, Certificates and Round One winners announced. Topics with instructions allotted to each winner<br>
+       <div class="content" style="font-weight:bold;text-align:center;font-size:20px;">March 25:</div>Round Two at BITS Pilani, Pilani Campus<br>
+</div>
+</div>
+</li>
+</ul>
+  </div> 
+  </div> 
+	
+					<div class="slide" style="background: rgba(26,188,156,0.2)" >
+
+						<div id="container-contact" style="background: rgba(26,188,156,0.3);margin-top:1%;padding:2%">
+							<div class="headline"><h1>CONTACT US</h1><br><br>
+							</div>
+							<div class="content" >
+								<div class="city-vol">
+									<div>
+										<div>
+										 <div class="contact-card">
+										 	<span style="font-weight:bold;font-size:18px;">Sampath Kethineedi<br></span>
+											+91-9829253423<br><br>
+										</div>
+	 									 <div class="contact-card">
+	 									 	<span style="font-weight:bold;font-size:18px;">Arnav Sethi (North)<br/></span>
+	 										+91-7500395338<br><br>
+	 									</div>
+										</div>
+										<div>
+										 <div class="contact-card">
+										 	<span style="font-weight:bold;font-size:18px;">Likhit Teja (South) <br/></span>
+											+91-8302939999<br><br>
+										 </div>
+										 <div class="contact-card">
+										 	<span style="font-weight:bold;font-size:18px;">Samip Jasani (West)<br/></span>
+											+91-9408107665<br><br>
+										 </div>
+										</div>
+										<div>
+											
+										 <div class="contact-card">
+										 	<span style="font-weight:bold;font-size:18px;">Abhyuday Sharma (East)<br/></span>
+											+91-9983093025<br><br></div>  
+										<div class="contact-card"> 
+											<span style="font-weight:bold;font-size:18px;">Email us at:<br/></span>
+											aarohan@bits-apogee.org<br><br></div>
+										</div>   	
+								</div>     
+							</div>
+						</div> 
+					</div> 	 
+				</div>              
+				<script>
+					$('.nav-button').click(function(){ 
+						if ( $('.nav-button').hasClass('go-deep') ) { 
+							$('.header-left ul li').each(function(index, element) {
+								$(this).animate({'left':'-180px'},index * 100 + 100);
+							});
+							$(this).removeClass('go-deep');
+							$('.header-left ul').css('display','none');
+						}
+						else { 
+							$('.header-left ul').css('display','block');
+							$('.nav-button').addClass('go-deep');
+							$('.header-left ul li').each(function(index, element) {
+								$(this).animate({'left':'0px'},index * 100 + 100);
+							});
+						}
+					});
+//var windowheight = $(window).height();
+//var windowwidth = $(window).width();
+//$('#slider').css({ width : 2*windowwidth + 100 , height : windowheight});
+//$('#navhome').click(function() {
+//});
+window.onresize = function() {
+	var windowwidth= window.innerWidth;
+	var windowheight= window.innerHeight;
+	console.log(windowwidth);
+	if ( windowwidth > 650 && windowheight > 560 ) {
+		var slider = $.fn.fsvs({
+			speed : 1000,
+			bodyID : 'fsvs-body',
+			selector : '> .slide',
+			mouseSwipeDisance : 40,
+			afterSlide : function(){},
+			beforeSlide : function(){},
+			endSlide : function(){},
+			mouseWheelEvents : true,
+			mouseWheelDelay : false,
+			mouseDragEvents : false,
+			touchEvents : true,
+			arrowKeyEvents : true,
+			pagination : true,
+			nthClasses : false,
+			detectHash : true
+		});
+	}
+	else {
+		var slider = $.fn.fsvs({
+			speed : 1000,
+			bodyID : 'fsvs-body',
+			selector : '> .slide',
+			mouseSwipeDisance : 40,
+			afterSlide : function(){},
+			beforeSlide : function(){},
+			endSlide : function(){},
+			mouseWheelEvents : false,
+			mouseWheelDelay : false,
+			mouseDragEvents : false,
+			touchEvents : false,
+			arrowKeyEvents : true,
+			pagination : true,
+			nthClasses : false,
+			detectHash : true
+		});
+	}
+
+}
+$(document).ready( function() {
+	var windowwidth= window.innerWidth;
+	var windowheight= window.innerHeight;
+	if ( windowwidth > 650 && windowheight > 560 ) {
+		var slider = $.fn.fsvs({
+			speed : 1000,
+			bodyID : 'fsvs-body',
+			selector : '> .slide',
+			mouseSwipeDisance : 40,
+			afterSlide : function(){},
+			beforeSlide : function(){},
+			endSlide : function(){},
+			mouseWheelEvents : true,
+			mouseWheelDelay : false,
+			mouseDragEvents : false,
+			touchEvents : true,
+			arrowKeyEvents : true,
+			pagination : true,
+			nthClasses : false,
+			detectHash : true
+		});
+	}
+	else {
+		var slider = $.fn.fsvs({
+			speed : 1000,
+			bodyID : 'fsvs-body',
+			selector : '> .slide',
+			mouseSwipeDisance : 40,
+			afterSlide : function(){},
+			beforeSlide : function(){},
+			endSlide : function(){},
+			mouseWheelEvents : false,
+			mouseWheelDelay : false,
+			mouseDragEvents : false,
+			touchEvents : false,
+			arrowKeyEvents : true,
+			pagination : true,
+			nthClasses : false,
+			detectHash : true
+		});
+	}
+});
+// $('#container-school ul li .left-pane-image img').click(function() {
+// 	$('#container-school ul li').each(function(index, element) {
+// 		if( $(this).hasClass('inactive') ) {
+// 			$(this).removeClass('inactive'); }
+// 			else {  $(this).addClass('inactive'); }
+// 		});
+// 	$('.red-overlay').toggleClass('move');
+	
+// });
+// $('.header-left ul li').click(function() {
+// 	var i = $(this).index();
+// 	console.log(i);
+// 	$('#fsvs-pagination').children('li').eq(i).trigger('click');
+// 	if( i > 3) 
+// 		$('#fsvs-pagination').children('li').eq(i-2).trigger('click');
+// });
+// $('.header-left ul li').eq(2).click(function() {
+// 	$('#fsvs-pagination').children('li').eq(1).trigger('click');
+// 	$('#container-school ul li').eq(1).removeClass('inactive');
+// 	$('#container-school ul li').eq(0).addClass('inactive');
+// 	$('.red-overlay').addClass('move');
+// });
+// $('.header-left ul li').eq(1).click(function() {
+// 	$('#fsvs-pagination').children('li').eq(1).trigger('click');
+// 	$('#container-school ul li').eq(0).removeClass('inactive');
+// 	$('#container-school ul li').eq(1).addClass('inactive');
+// 	$('.red-overlay').removeClass('move');
+// });
+
+$('.header-left ul li').click(function(){
+	$('.nav-button').click();
+})
+$(document).ready(function(){
+	//global vars
+	var form = $("#customForm");
+	var name = $("#name");
+	var nameInfo = $("#nameInfo");
+	var email = $("#email");
+	var emailInfo = $("#emailInfo");
+	var schoolname = $('#schoolname');
+	var schoolnameInfo = $("#schoolnameInfo");
+	var send = $('#send');
+	//On blur
+	name.blur(validateName);
+	schoolname.blur(validateSchoolName);
+	email.blur(validateEmail);
+	//On key press
+	name.keyup(validateName);
+	schoolname.keyup(validateSchoolName);
+	//On Submitting
+	send.click(function(){
+		if(validateName() & validateEmail() & validateSchoolName() )
+			return true
+		else
+			return false;
+	});
+	
+	//validation functions
+	function validateEmail(){
+		//testing regular expression
+		var a = $("#email").val();
+		var filter = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+		//if it's valid email
+		if(filter.test(a)){
+			email.removeClass("error");
+			emailInfo.text("Please enter a valid email-id");
+			emailInfo.removeClass("error");
+			return true;
+		}
+		//if it's NOT valid
+		else{
+			email.addClass("error");
+			emailInfo.text("*");
+			emailInfo.addClass("error");
+			return false;
+		}
+	}
+	function validateName(){
+		//if it's NOT valid
+		if(name.val().length < 1){
+			name.addClass("error");
+			nameInfo.text("*");
+			nameInfo.addClass("error");
+			return false;
+		}
+		//if it's valid
+		else{
+			name.removeClass("error");
+			nameInfo.text("Please enter a valid name");
+			nameInfo.removeClass("error");
+			return true;
+		}
+	}
+	function validateSchoolName(){
+		//if it's NOT valid
+		if(schoolname.val().length < 1){
+			schoolname.addClass("error");
+			schoolnameInfo.text("*");
+			schoolnameInfo.addClass("error");
+			return false;
+		}
+		//if it's valid
+		else{
+			schoolname.removeClass("error");
+			schoolnameInfo.text("Please enter a valid school name");
+			schoolnameInfo.removeClass("error");
+			return true;
+
+		}
+
+	}
+});
+</script>
+<script src="{% static 'aarohan/js/jquerypp.custom.js' %}"></script>
+<script src="{% static 'aarohan/js/jquery.bookblock.js' %}"></script>
+<script>
+
+	$('#uploadButton').click(function(){
+		$('#uploadForm').show().css({
+			'display':'flex'
+		});
+		$("input#uploadRegSheet").val();
+		$('#message').hide();
+		 $('#uploadSumit').html('Submit');
+    	 $('#uploadSumit').removeClass('disabled');
+		$('.upload-wrapper').fadeIn();
+	})
+
+
+	$('.form-wrap').click(function(ev){
+		if($(ev.target).closest('.form-inner').length==0)
+				$('.upload-wrapper').fadeOut();
+	})
+
+	$('#close').click(function () {
+		$('.upload-wrapper').fadeOut();
+	});
+
+	  var regSheet;
+
+    $("input#uploadRegSheet").on('change', function(e) {
+        regSheet = e.target.files[0];
+    });
+
+var data;
+    $('#uploadSumit').click(function (ev) {
+    	ev.preventDefault();
+    	var $this=$(this);
+    	$this.html('Please Wait');
+    	$this.addClass('disabled');		
+    	data=new FormData();
+    	data.append('file',regSheet);
+    	$.ajax({
+    		type:'POST',
+    		url:'./register/',
+    		data:data,
+    		processData: false,
+            contentType: false,
+    		success:function (response) {
+    			if(response.status=1){
+    				$('#uploadForm').hide();
+					$('#message').html(response.message).show();
+    			}
+    			else{
+					$('#message').html('Try Again');
+    			}
+		    	$this.html('Submit');
+		    	$this.removeClass('disabled');		
+    		}
+    	})
+    })
+
+
+	var Page = (function() {
+
+		var config = {
+			$bookBlock : $( '#bb-bookblock' ),
+			$navNext : $( '#bb-nav-next' ),
+			$navPrev : $( '#bb-nav-prev' ),
+			$navFirst : $( '#bb-nav-first' ),
+			$navLast : $( '#bb-nav-last' )
+		},
+		init = function() {
+			config.$bookBlock.bookblock( {
+				speed : 1000,
+				shadowSides : 0.8,
+				shadowFlip : 0.4
+			} );
+			initEvents();
+		},
+		initEvents = function() {
+
+			var $slides = config.$bookBlock.children();
+
+						// add navigation events
+						config.$navNext.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						} );
+
+						config.$navPrev.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'prev' );
+							return false;
+						} );
+
+						config.$navFirst.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'first' );
+							return false;
+						} );
+
+						config.$navLast.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'last' );
+							return false;
+						} );
+						
+						// add swipe events
+						$slides.on( {
+							'swipeleft' : function( event ) {
+								config.$bookBlock.bookblock( 'next' );
+								return false;
+							},
+							'swiperight' : function( event ) {
+								config.$bookBlock.bookblock( 'prev' );
+								return false;
+							}
+						} );
+
+						// add keyboard events
+						$( document ).keydown( function(e) {
+							var keyCode = e.keyCode || e.which,
+							arrow = {
+								left : 37,
+								up : 38,
+								right : 39,
+								down : 40
+							};
+
+							switch (keyCode) {
+								case arrow.left:
+								config.$bookBlock.bookblock( 'prev' );
+								break;
+								case arrow.right:
+								config.$bookBlock.bookblock( 'next' );
+								break;
+							}
+						} );
+					};
+
+					return { init : init };
+
+				})();
+			</script>
+			<script>
+				Page.init();
+			</script>
+		</body>
+		</html>

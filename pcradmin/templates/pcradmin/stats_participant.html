@@ -1,0 +1,115 @@
+{% extends "pcradmin/base.html" %}
+{% block body %}
+
+
+<script type= 'text/javascript'>
+function checkall(gauss){
+  var cbx = document.getElementsByTagName('input');
+  for(var i=0; i< cbx.length ; ++i)
+  {
+    if(cbx[i].type == 'checkbox')
+      cbx[i].checked = gauss.checked;
+
+  }
+}
+</script>
+
+
+<div>
+    <div class="container">
+    <div class="row">
+        <div class="twelve columns textcenter">
+            <h1>Apogee Participants</h1>
+            <a href="{% url 'pcradmin:dashboard' %}" class="button button-primary">Dashboard</a>
+            <form action="." method= 'POST'>
+            {% if title %}
+                <h4>{{title}}</h4>
+            {% endif%}
+            {% csrf_token %}
+            <button name="approval" value="2" class="button" style="background-color : #00CC00; color : white;">Approve & Notify</button>
+            <button name="approval" value="1" class="button" style="background-color : #FF0000; color : white;">Deny</button>
+            <br>
+                <table class= "u-full-width">
+                    <tbody>
+                        <tr>
+                            <th>Select All <input type= 'checkbox' name= 'selectall' onclick= "checkall(this)"> </th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>College</th>
+                            <th>City</th>
+                            <th>Online Paid</th>
+                            <th>Verified Mail</th>
+                            <th>Pcr Approved</th>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                    {% for part in object_list %}
+                    <tr>
+
+                        <td>
+                            <input type = 'checkbox' name='part_list' value = {{part.id}}>
+                        </td>
+                        <td> <a href ="{% url 'pcradmin:participant details' part.id %}">{{part.name}}</a></td>
+                        <td> {{part.email}} </td>
+                        <td> {{part.phone}} </td>
+                        <td>{{ part.college.name }}</td>
+                        <td>{{ part.city }}</td>
+
+                        {% if part.fee_paid %}
+                        <td style='color:green'>
+                            Yes
+                        </td>
+                        {% else %}
+                        <td style='color:red'>
+                            No
+                        </td>
+                        {% endif %}
+
+                        {% if part.email_verified %}
+                        <td style='color:green'>
+                            Yes
+                        </td>
+                        {% else %}
+                        <td style='color:red'>
+                            No
+                        </td>
+                        {% endif %}
+
+                        {% if part.pcr_approval %}
+                        <td style='color:green'>
+                            Yes
+                        </td>
+                        {% else %}
+                        <td style='color:red'>
+                            No
+                        </td>
+                        {% endif %}
+                    </tr>
+
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+            {% if is_paginated %}
+                <span class="page-current">
+                {% if page_obj.has_previous %}
+                    <form method="GET" action="." style="display: inline">
+                        <input type="number" name="page" value="{{ page_obj.previous_page_number }}" hidden>
+                        <button class="button" type="submit">Previous</button>
+                    </form>
+                {% endif %}
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                {% if page_obj.has_next %}
+                    <form method="GET" action="." style="display: inline">
+                        <input type="number" name="page" value="{{ page_obj.next_page_number }}" hidden>
+                        <button class="button" type="submit">Next</button>
+                    </form>
+                {% endif %}
+                </span>
+            {% endif %}
+        </div>   
+    </div>
+    </div>
+</div>
+{% endblock body %}

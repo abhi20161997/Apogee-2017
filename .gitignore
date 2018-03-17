@@ -1,0 +1,9 @@
+*.pyc
+.idea
+apogee17/config.py
+/static/
+media/
+*.db
+db.sqlite3
+*.xlsx
+config.py

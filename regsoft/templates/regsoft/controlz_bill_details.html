@@ -1,0 +1,138 @@
+{% extends "regsoft/base.html" %}
+{% block body %}
+{% load staticfiles %}
+<div class="wrapper">
+	<div class="sidebar" data-color="purple"  data-image="{% static 'regsoft/img/sidebar-4.jpg' %}">  
+		<!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+		<div class="sidebar-wrapper">
+			<div class="logo">
+				<a href="#" class="simple-text">
+					<strong>Controls</strong>
+				</a>
+			</div>                     
+			<ul class="nav">
+				<li>
+					<a href="{% url 'regsoft:controls home' %}">
+						<i class="pe-7s-home"></i> 
+						<p>Home</p>
+					</a>            
+				</li>
+
+				<li>
+
+					<a href="{% url 'regsoft:controls group payment' leader.id %}">
+						<i class="pe-7s-menu"></i> 
+						<p>Dashboard</p>
+					</a>
+   
+				</li>
+				<li>
+					<a href="{% url 'regsoft:groupcodelist' %}">
+						<i class="pe-7s-note2"></i> 
+						<p>Passed Groups</p>
+					</a>            
+				</li>
+
+				<li>
+					<a href="{% url 'regsoft:controls bill delete' %}">
+						<i class="pe-7s-news-paper"></i> 
+						<p>Delete Bill</p>
+					</a>
+				</li> 
+			</ul> 
+		</div>
+	</div>
+
+	
+	<div class="main-panel">
+		<nav class="navbar navbar-default navbar-fixed">
+			<div class="container-fluid">    
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><strong> Controls Booth </strong></a>
+				</div>
+				<div class="collapse navbar-collapse">       
+					<ul class="nav navbar-nav navbar-left">
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="{% url 'registration:logout' %}">
+								Log out
+							</a>
+						</li> 
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="content">
+			<div class="container-fluid">
+				<div class="row">                   
+					<div class="col-md-12">
+						<div class="card card-plain">
+							<div class="header">
+								<h4 class="title">Regsoft | DVM</h4>
+							</div>
+							<div class="content table-responsive table-full-width">
+								<br><br>
+								<div align= "center">
+									<p>
+										<h4><strong> Bill Details </strong></h4><br>
+										<strong>Receipt No. : {{bill.id}} </strong><br>
+										<strong>GL College : {{leader.college}} </strong><br>
+										<strong>Cash Given : {{bill.given}} </strong><br>
+										<strong>Balance: {{bill.balance}} </strong><br>
+										<strong>DD number: {% if bill.draft_number %}{{bill.draft_number}}{% else %}None{% endif %} </strong><br>
+										<strong>DD amount: {% if bill.draft_amount %}{{bill.draft_amount}}{% else %}None{% endif %} </strong><br>
+										<strong>Amount per participant: 900 </strong> <br>
+										<strong>Amount per onlinepaid: 800(Paid Online) </strong> <br>
+										<strong>Total Amount Paid here : {{bill.amount}} </strong> <br>
+										<br>
+										<strong>Online Paid: {{online_paid}} </strong> <br>
+										<strong>No. of Males : {{males}} </strong><br>
+										<strong>No. of Females : {{females}} </strong><br>
+										<strong>Total Individuals : {{males | add:females}} </strong><br>
+									</p>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<form method= "POST" action="{% url 'regsoft:controls bill print' %}">
+												{% csrf_token %}
+												<input type = "hidden" name = 'leader_id' value="{{leader.id}}" >
+												<input type = 'hidden' name='bill_id' value= "{{bill.id}}" >
+												<button type="submit" class="btn btn-info btn-fill col-md-3 col-md-offset-11" >Print Receipt</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FOOTER FOR THE PAGE -->	
+		<footer class="footer">
+			<div class="copyright container-fluid">
+
+					<p class="pull-left">
+				&copy; 2017 <a >Department of Visual Media</a>   
+				</p>
+
+
+				<p class="pull-right">
+					For any queries contact :<strong> 7689053339 </strong> / 9953108361 / 8233772837 
+				</p>
+			</div>
+		</footer>
+	</div>   
+</div>
+{% endblock body %}
+
+

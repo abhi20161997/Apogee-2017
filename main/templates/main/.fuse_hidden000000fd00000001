@@ -1,0 +1,108 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>APOGEE MAIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/normalize.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>
+    <nav>
+       <div class="ham">
+        <img src="{% static 'main/img/ham3.svg' %}" class="open">
+        <img src="{% static 'main/img/close2.svg' %}" class="close">
+    </div>
+    <div class="nav-inner">
+        <ul class="main-nav">
+            <li><a href="./exhibitions">Exhibitions</a></li>
+            <li><a href="./workshops">Workshops</a></li>
+            <li><a href="./events">Events</a></li>
+            <li><a href="./think_again">Think Again</a></li>
+            <li><a href="./#literary_fest">Literary Fest</a></li>
+            <li><a href="./prof_show">Prof Show</a></li>
+            <!-- <li><a href="/schedule">Schedule</a></li> -->
+            <li><a href="./competition">Competition</a></li>
+            <li><a href="./#login">Register/Login</a> </li>
+            <li  class="search-mob-icon" > <img src="{% static 'main/img/search.svg'%}"></li>
+        </ul>
+
+        <div class="mob-nav">
+            <div class="search">
+                <input id="search-mob" placeholder="Search"></input>
+                <div class="search-mob-icon">
+                    <img src="{% static 'main/img/search.svg'%}">
+                </div>
+            </div>
+            <div class="search-results">
+                <div class="menu">
+                    <h2 class="list-type">Menu</h2>
+                    <ul>
+                        <li><a href="./exhibitions">Exhibitions</a></li>
+                        <li><a href="./workshops">Workshops</a></li>
+                        <li><a href="./events">Events</a></li>
+                        <li><a href="./think_again">Think Again</a></li>
+                        <li><a href="./#literary_fest">Literary Fest</a></li>
+                        <li><a href="./prof_show">Prof Show</a></li>
+                        <!-- <li><a href="/schedule">Schedule</a></li> -->
+                        <li><a href="./competition">Competition</a></li>
+                        <li><a href="./#login">Register/Login</a> </li>
+                    </ul>
+                </div>
+                <div class="events">
+                    <h2 class="list-type">Events</h2>
+                    <ul>
+                        <li><a href="./exhibitions">Exhibitions</a></li>
+                        <li><a href="./workshops">Workshops</a></li>
+                        <li><a href="./events">Events</a></li>
+                        <li><a href="./think_again">Think Again</a></li>
+                        <li><a href="./#literary_fest">Literary Fest</a></li>
+                        <li><a href="./prof_show">Prof Show</a></li>
+                        <!-- <li><a href="/schedule">Schedule</a></li> -->
+                        <li><a href="./competition">Competition</a></li>
+                        <li><a href="./#login">Register/Login</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- <div class="pages literary_fest">
+</div> -->
+<div class="pages search-pg">
+    <div class="back">
+    <img src="{% static 'main/img/back.svg'%}">
+    </div>
+    <div class="search">
+        <input id="search-mob" placeholder="Search"></input>
+        <div class="search-mob-icon">
+            <img src="{% static 'main/img/search2.svg'%}">
+        </div>
+    </div>
+    <div class="search-result">
+        <div class="menu">
+             <h2 class="search-type">Menu</h2>
+                    <ul>
+                        <li><a href="./exhibitions">Exhibitions</a></li>
+                        <li><a href="./workshops">Workshops</a></li>
+                        <li><a href="./events">Events</a></li>
+                        <li><a href="./think_again">Think Again</a></li>
+                        <li><a href="./#literary_fest">Literary Fest</a></li>
+                        <li><a href="./prof_show">Prof Show</a></li>
+                        <!-- <li><a href="/schedule">Schedule</a></li> -->
+                        <li><a href="./competition">Competition</a></li>
+                        <li><a href="./#login">Register/Login</a> </li>
+                    </ul>
+        </div>
+        <div class="events">
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'main/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'main/js/script.js' %}"></script>
+</body>
+</html>

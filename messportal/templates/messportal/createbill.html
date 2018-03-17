@@ -1,0 +1,186 @@
+{% extends "regsoft/base.html" %}
+{% block body %}
+    
+<div class="wrapper">
+    <div class="sidebar" data-color="purple">  
+    
+    <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+    
+    
+       <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#" class="simple-text">
+                    <strong>Controls </strong>
+                </a>
+            </div>
+                       
+            <ul class="nav">
+                <li>
+                    <a href="{% url 'messportal:home' %}">
+                        <i class="pe-7s-home"></i> 
+                        <p>HOME</p>
+                    </a>            
+                </li>
+                <li>
+                    <a href="{% url 'messportal:profshow' %}">
+                        <i class="pe-7s-home"></i> 
+                        <p>Prof Shows / Workshops</p>
+                    </a>            
+                </li>
+                <li>
+                    <a href="{% url 'messportal:bills' %}">
+                        <i class="pe-7s-news-paper"></i> 
+                        <p>bill LIST</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="{% url 'messportal:profshow bill list' %}">
+                        <i class="pe-7s-news-paper"></i> 
+                        <p>Profshow bill LIST</p>
+                    </a>
+                </li>
+            </ul> 
+        </div>
+    </div>
+
+    
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">    
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><strong>Mess Portal</strong></a>
+                </div>
+                <div class="collapse navbar-collapse">       
+                    <ul class="nav navbar-nav navbar-left">
+                    </ul>
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">
+                                Log out
+                            </a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+                     
+                     
+
+
+
+       <div class="content">
+            <div class="container-fluid">
+                <div class="row">                   
+                    
+                    <div class="col-md-12">
+                        <div class="card card-plain">
+                            <div class="header">
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                               
+                                   
+								<div align= "center">
+	                                <p >
+	                                    <strong> Bill Details </strong><br>
+	                                    Buyer: {{part.name}}<br>
+	                                    College : {{part.college.name}}<br>
+					    {% if stubno %}{{stubno}}<br>{% endif %}
+	                                    Item: {{item}}<br>
+					    Bhavan: {{bhavan}}<br>
+					    Date: {{date}}<br>
+	                                    Quantity: {{qty}}<br>
+	                                    Total Amount : {{totalamt}}
+	                                </p>
+								</div>
+								<div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+<form method= "POST" action=".">
+{% csrf_token %}
+<input hidden name="code" value="{{part.id}}">
+<input hidden name="bitsid" value="{{bitsid}}">
+<input hidden name="item" value="{{item}}">
+<input hidden name="stubno" value="{{stubno}}">
+<input hidden name="qty" value="{{qty}}">
+<input hidden name="date" value="{{date}}">
+<input hidden name="bhavan" value="{{bhavan}}">
+
+<label ><strong>Denominations</label>
+<!-- <p align ="center">Denominations</p> -->
+<table align="center">
+<tr><td> 2000 x</td><td><input onchange="findTotal()" class="form-control" type ="text" name="n_2000" id="n_2000" value=0 /></td></tr>
+<tr><td>500 x</td><td><input onchange="findTotal()" class="form-control" type ="text" name="n_500" id="n_500" value=0 /></td></tr>
+<tr><td>100 X</td><td><input onchange="findTotal()" class="form-control" type ="text" name="n_100" id="n_100" value=0 /></td></tr>
+<tr><td>50 X</td><td><input onchange="findTotal()" class="form-control" type ="text" name="n_50" id="n_50" value=0 /></td></tr>
+<tr><td>20 X</td><td><input onchange="findTotal()" class="form-control" type ="text" name="n_20" id="n_20" value=0 /></td></tr>
+<tr><td>10 X</td><td><input onchange="findTotal()" class="form-control" type ="text" name="n_10" id="n_10" value=0 /></td></tr>
+
+<tr><td><strong>Total Amount:</strong></td><td><input type="text" class="form-control" name="total" id="total" value="0" /></td></tr>
+</table>
+
+ <button type="submit" class="btn btn-info btn-fill pull-right">Generate Receipt</button>
+
+
+</form>
+
+<script type="text/javascript">
+function findTotal(){
+    var v2000 = document.getElementsByName('n_2000')[0].value;
+    var v500 = document.getElementsByName('n_500')[0].value;
+    var v100 = document.getElementsByName('n_100')[0].value;
+    var v50 = document.getElementsByName('n_50')[0].value;
+    var v20 = document.getElementsByName('n_20')[0].value;
+    var v10 = document.getElementsByName('n_10')[0].value;
+    var tot = ((parseInt(v2000))*2000) + ((parseInt(v500))*500) + ((parseInt(v100))*100) + ((parseInt(v50))*50) + ((parseInt(v20))*20) + ((parseInt(v10))*10);
+    
+    document.getElementsByName('total')[0].value = tot;
+}
+
+</script>     
+
+
+        </div>
+</div>
+
+
+                            </div>
+                        </div>
+                    </div> 
+                    
+                                 
+                </div>                    
+            </div>
+        </div>
+
+
+
+
+        <!-- FOOTER FOR THE PAGE -->
+        
+        <footer class="footer">
+            <div class="copyright container-fluid">
+
+                    <p class="pull-left">
+                &copy; 2017 <a >Department of Visual Media</a>   
+                </p>
+
+
+                <p class="pull-right">
+                    For any queries contact : 9953108361 / 8233772837
+                </p>
+            </div>
+        </footer>
+        
+        
+    </div>   
+</div>
+{% endblock body %}
+
+

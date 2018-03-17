@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="apogee_x5F_tetris" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="212 450 397 343" style="enable-background:new 212 450 397 343;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#4CD6F0;}
+</style>
+<path id="block8" class="st0" d="M557.7,502.3c-0.4-0.3-0.7-12.3-0.7-26.5V450h26h26v26.5V503h-25.3
+	C569.7,503,558,502.7,557.7,502.3z"/>
+<g id="block7">
+	<path class="st0" d="M557.5,560.7c-0.3-0.7-0.4-12.9-0.3-27.2l0.3-26l25.8-0.3L609,507v27.5V562h-25.5
+		C563.8,562,557.8,561.7,557.5,560.7z"/>
+	<path class="st1" d="M486,593v-27h61.5H609v27v27h-61.5H486V593z"/>
+</g>
+<g id="block6">
+	<path class="st0" d="M282,593v-27h27h27v27v27h-27h-27V593z"/>
+	<path class="st1" d="M212,652v-27h62h62v27v27h-62h-62V652z"/>
+</g>
+<g id="block5">
+	<path class="st1" d="M351,652v-27h62.5H476v26c0,22.4-0.2,26-1.5,26c-0.8,0-1.5,0.5-1.5,1c0,0.7-21,1-61,1h-61V652z"/>
+	<path class="st1" d="M351,593v-27h62.5H476v26c0,22.4-0.2,26-1.5,26c-0.8,0-1.5,0.5-1.5,1c0,0.7-21,1-61,1h-61V593z"/>
+</g>
+<path id="block4" class="st1" d="M486,652v-27h61.5H609v27v27h-61.5H486V652z"/>
+<g id="block3">
+	<path class="st0" d="M220,711v-27h27.5H275v27v27h-27.5H220V711z"/>
+	<path class="st1" d="M284,711v-27h63h63v27v27h-63h-63V711z"/>
+</g>
+<g id="block2">
+	<path class="st0" d="M557,768v-25h26h26v25v25h-26h-26V768z"/>
+	<path class="st0" d="M557.2,711.3l0.3-26.8l25.8-0.3L609,684v27v27h-26h-26L557.2,711.3z"/>
+	<path class="st1" d="M420,711v-27h62.5H545v27v27h-62.5H420V711z"/>
+</g>
+<path id="block1_1_" class="st1" d="M420,768v-25h62.5H545v25v25h-62.5H420V768z"/>
+</svg>

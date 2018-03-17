@@ -1,0 +1,22 @@
+{% extends "pcradmin/base.html" %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="twelve columns textcenter">
+            <h1>Participants</h1>
+            <a href="{% url 'pcradmin:dashboard' %}" class="button button-primary">Dashboard</a><br>
+            <br>
+            <h5><strong>Mail to {{filter}} Participants</strong></h5>
+            <br>
+            <form action="{% url 'pcradmin:participants mail' filter %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="filter" value="{{filter}}">
+                <input type="text" name="subject" required placeholder="Subject">
+                <button class="button" style="background-color : #00E600; color : white;">Send Mail </button>
+                <br>
+                <textarea name='body' style="width:550px;height:350px;" required>{{mailbody}}</textarea>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

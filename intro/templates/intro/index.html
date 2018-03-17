@@ -1,0 +1,695 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html  class="js willchange csspointerevents no-touchevents" >
+<head>
+	<meta charset="utf-8">
+
+	<title>APOGEE 2017 | The Retrofuture | BITS Pilani</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="EN">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content = "Apogee, the technical festival of BITS Pilani, is a large scale event that has attracted the connoisseurs of engineering and technology over years. It represents the zenith of science and engineering in a landscape of future visionaries and scientists."/>
+	<meta name = "keywords" content = "apogee, technical Festival, techfest, tech fest, bits pilani, apogee 2017, bits tech fest, bits fest, birla institute of technology and science"/>
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow">
+	<meta name="copyright" content="Copyright © 2016 Department Of Visual Media, BITS Pilani">
+	<meta name="author" content="Department Of Visual Media, BITS Pilani">
+	<meta name="email" content="webmaster@bits-apogee.org">
+	<meta name="rating" content="general">
+	<meta name="distribution" content="Global">
+	<meta name="revisit-after" content="1 days">
+	<meta name="google-site-verification" content="PgrAJduJyWy5BDAT2lgQ8q_GbwyL_F1SCmUdg1MhVVw" />
+
+	<!-- OPEN GRAPH META DATA-->
+	<meta property="og:url" content="http://www.bits-apogee.org/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="APOGEE 2017 | International Technical Festival">
+	<meta property="og:description" content="APOGEE, the technical festival of BITS Pilani, is a large scale event that has attracted the connoisseurs of engineering and technology over years. It represents the zenith of science and engineering in a landscape of future visionaries and scientists.">
+	<meta property="og:author" content="Department of Visual Media, BITS Pilani">
+	<meta property="og:image:url" content="http://bits-apogee.org/2017/static/intro/img/screenshot.jpg">
+		
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="prefetch" href="{% static 'intro/fonts/MFred.woff2' %}">
+	<link rel="prefetch" href="{% static 'intro/img/retrofuture.jpg' %}">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy|Ubuntu" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'intro/css/normalize.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'intro/css/landing.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'intro/css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'intro/css/nav-style.css' %}">
+	<link rel="stylesheet" href="{% static 'intro/css/speakers/main.css' %}">
+	<link rel="stylesheet" href="{% static 'intro/css/events/style.css' %}">
+	<link rel="stylesheet" href="{% static 'intro/css/papers.css' %}">
+	<link rel="stylesheet" href="{% static 'intro/css/animate.min.css' %}">
+	<link rel="stylesheet" href="{% static 'intro/css/responsive.css' %}">
+
+	<link rel="shortcut icon" href="{% static 'intro/img/logo.png' %}" type="image/png"/>
+
+
+	<script>
+		window.App = {};
+		App.path = "index.html";
+		App.view = "home";
+		App.FXs = [];
+		App.isIE11 = !!(navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/));
+
+		var b = document.documentElement;
+		b.setAttribute('data-useragent',  navigator.userAgent);
+	</script>
+</head>
+<body class="" style="pointer-events: auto;background-color: #2d3a4a;">
+
+
+
+	<div class="loader-container" >
+		<div class="loader-grid">
+			<div class="tetris-wrapper">
+				<div class="tetris block-1"></div>
+				<div class="tetris block-2"></div>
+				<div class="tetris block-3"></div>
+				<div class="tetris block-4"></div>
+				<div class="tetris block-5"></div>
+				<div class="tetris block-6"></div>
+				<div class="tetris block-7"></div>
+				<div class="tetris block-8"></div>
+				<!-- <div class="overlay"></div> -->
+			</div>
+		</div>
+		<div class="loading-custom">Loading...</div>
+	</div>
+
+	<div class="anim-container">
+		<div class="split-cont">
+			<div class="spblock-1">
+			</div>
+			<div class="spblock-2">
+			</div>
+		</div>
+		<div class="text-wrapper">
+			<div class="landing-letters" id="apogee">
+				<div class="lettera-0">
+					<span class="landing-mask">A</span>	
+				</div>
+				<div class="lettera-1">
+					<span class="landing-mask animated slideInRight">P</span>	
+				</div>
+				<div class="lettera-2">
+					<span class="landing-mask animated slideInLeft">O</span>	
+				</div>
+				<div class="lettera-3">
+					<span class="landing-mask animated slideInUp">G</span>	
+				</div>
+				<div class="lettera-4">
+					<span class="landing-mask">E</span>	
+				</div>
+				<div class="lettera-5">
+					<span class="landing-mask animated slideInRight">E</span>	
+				</div>
+			</div>
+			<div class="landing-letters" id="retrofuture">
+				<div class="letter-0">
+					<span class="landing-mask">T</span>	
+				</div>
+				<div class="letter-1">
+					<span class="landing-mask animated slideInRight">H</span>	
+				</div>
+				<div class="letter-2">
+					<span class="landing-mask animated slideInLeft">E</span>	
+				</div>
+				<div class="letter-3">
+					<span class="landing-mask animated slideInUp">&nbsp;</span>	
+				</div>
+				<div class="letter-4">
+					<span class="landing-mask animated slideInUp">R</span>	
+				</div>
+				<div class="letter-5">
+					<span class="landing-mask animated slideInRight">E</span>	
+				</div>
+				<div class="letter-6">
+					<span class="landing-mask animated slideInUp">T</span>	
+				</div>
+				<div class="letter-7">
+					<span class="landing-mask animated slideInUp">R</span>	
+				</div>
+				<div class="letter-8">
+					<span class="landing-mask animated slideInDown">O</span>	
+				</div>
+				<div class="letter-9">
+					<span class="landing-mask animated slideInRight">F</span>	
+				</div>
+				<div class="letter-10">
+					<span class="landing-mask animated slideInUp">U</span>	
+				</div>
+				<div class="letter-11">
+					<span class="landing-mask animated slideInLeft">T</span>	
+				</div>
+				<div class="letter-12">
+					<span class="landing-mask animated slideInDown">U</span>	
+				</div>
+				<div class="letter-13">
+					<span class="landing-mask animated slideInLeft">R</span>	
+				</div>
+				<div class="letter-14">
+					<span class="landing-mask animated slideInRight">E</span>	
+				</div>
+			</div>
+			<!-- <div class="enter-site">
+				<div class="btn-bg"></div>
+				<span style="z-index: 1;">EXPERIENCE OUR SITE</span>
+			</div> -->
+		</div>
+		<div class="social-api">	
+				<div class="fb-like" data-href="https://www.facebook.com/bitsapogee" data-width="150px" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+				<a class="twb twitter-follow-button" href="https://twitter.com/bitsapogee">Follow @BITSApogee</a>
+
+		</div>
+	</div>
+
+	<script src="{% static 'intro/js/jquery.min.js' %}"></script>
+	<script src="{% static 'intro/js/loader.js' %}"></script>
+
+	<div class="site-content" >
+		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+
+			<symbol viewBox="88 -194.7 246.7 456.7" id="shape-facebook">
+				<path d="M246.3-193.9c-49,0-87.5,38.5-87.5,87.5v52.5h-70v70h70v245h70v-245h78.8l17.5-70h-96.3v-52.5c0-10.5,7-17.5,17.5-17.5h87.5
+				v-70H246.3z"></path>
+			</symbol>
+
+			<symbol viewBox="194 -152.2 458 372.2" id="shape-twitter">
+				<path d="M649.7-106.6c-16.9,7.1-33.9,12.7-53.7,14.1c19.8-11.3,33.9-29.7,40.9-50.8c-18.4,11.3-38.1,18.4-59.3,22.6
+				c-16.8-18.4-40.8-29.7-67.7-29.7c-50.8,0-93.2,40.9-93.2,93.2c0,7.1,1.4,14.1,2.8,21.2c-77.7-4.2-145.4-40.9-190.6-97.4
+				c-8.5,14.1-12.7,29.7-12.7,46.6c0,32.5,16.9,60.7,40.9,77.7c-15.5,0-29.7-4.2-42.4-11.3v1.4c0,45.2,32.5,81.9,74.8,90.4
+				c-8.5,2.8-15.5,2.8-24,2.8c-5.6,0-11.3,0-16.9-1.4c11.3,36.7,46.6,63.5,86.1,65c-31.1,25.4-72,39.5-115.8,39.5
+				c-7.1,0-15.5,0-22.6-1.4c40.9,26.8,90.4,42.4,142.6,42.4C509.8,218.2,603,77,603-45.9c0-4.2,0-8.5,0-11.3
+				C621.5-72.7,637-88.2,649.7-106.6L649.7-106.6z"></path>
+			</symbol>
+			<symbol  viewBox="0 0 510 510" id="shape-instagram">
+			<path d="M459,0H51C22.95,0,0,22.95,0,51v408c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z
+			 M255,153c56.1,0,102,45.9,102,102c0,56.1-45.9,102-102,102c-56.1,0-102-45.9-102-102C153,198.9,198.9,153,255,153z M63.75,459
+			C56.1,459,51,453.9,51,446.25V229.5h53.55C102,237.15,102,247.35,102,255c0,84.15,68.85,153,153,153c84.15,0,153-68.85,153-153
+			c0-7.65,0-17.85-2.55-25.5H459v216.75c0,7.65-5.1,12.75-12.75,12.75H63.75z M459,114.75c0,7.65-5.1,12.75-12.75,12.75h-51
+			c-7.65,0-12.75-5.1-12.75-12.75v-51c0-7.65,5.1-12.75,12.75-12.75h51C453.9,51,459,56.1,459,63.75V114.75z"/>
+
+			</symbol>
+
+			<symbol viewBox="0 0 18.136 18.136" id="shape-youtube">
+			<path d="M16.281,0.001H1.855C0.831,0.001,0,0.83,0,1.855v14.426c0,1.025,0.831,1.854,1.855,1.854h14.426
+		c1.024,0,1.855-0.828,1.855-1.854V1.855C18.136,0.83,17.306,0.001,16.281,0.001z M10.447,3.063h0.883v2.785
+		c0,0.535,0.017,0.519,0.035,0.586c0.019,0.071,0.083,0.238,0.29,0.238c0.22,0,0.281-0.176,0.298-0.251
+		c0.014-0.065,0.03-0.052,0.03-0.61V3.063h0.882v4.18h-0.894l0.011-0.211L11.71,6.919c-0.069,0.14-0.149,0.24-0.247,0.31
+		c-0.099,0.069-0.21,0.104-0.342,0.104c-0.152,0-0.276-0.033-0.37-0.098c-0.092-0.063-0.156-0.141-0.198-0.24
+		c-0.046-0.11-0.075-0.229-0.086-0.346c-0.013-0.135-0.02-0.414-0.02-0.83V3.063L10.447,3.063z M7.379,4.801
+		c0-0.436,0.037-0.773,0.107-1.012C7.552,3.568,7.669,3.394,7.844,3.26c0.178-0.139,0.413-0.208,0.699-0.208
+		c0.244,0,0.453,0.048,0.624,0.138c0.166,0.088,0.294,0.203,0.381,0.338C9.637,3.67,9.699,3.815,9.732,3.961
+		c0.034,0.152,0.051,0.398,0.051,0.73v0.736c0,0.432-0.017,0.747-0.048,0.941C9.705,6.546,9.639,6.716,9.54,6.872
+		C9.441,7.025,9.318,7.139,9.161,7.213C8.999,7.29,8.808,7.33,8.594,7.33c-0.244,0-0.451-0.034-0.617-0.104
+		C7.823,7.164,7.705,7.074,7.623,6.953C7.539,6.827,7.477,6.672,7.44,6.492C7.4,6.298,7.38,5.996,7.38,5.593L7.379,4.801z
+		 M5.314,1.574l0.718,2.311c0.125-0.604,0.367-1.44,0.559-2.311h0.651L6.404,4.871L6.398,4.897v2.344H5.635V4.897L5.629,4.872
+		L4.663,1.574H5.314z M15.708,14.501c-0.114,1.04-1.037,1.892-2.072,1.962c-3.048,0.131-6.087,0.131-9.134,0
+		c-1.036-0.07-1.958-0.922-2.073-1.962c-0.113-1.646-0.113-3.263,0-4.907c0.114-1.04,1.037-1.89,2.073-1.963
+		c3.047-0.13,6.086-0.13,9.134,0c1.036,0.073,1.958,0.923,2.072,1.963C15.822,11.238,15.822,12.855,15.708,14.501z M8.581,6.83
+		c0.128,0,0.228-0.077,0.273-0.21C8.875,6.559,8.9,6.443,8.9,6.127V4.316c0-0.366-0.021-0.484-0.043-0.551
+		C8.812,3.629,8.713,3.55,8.584,3.55c-0.127,0-0.227,0.076-0.274,0.211C8.286,3.826,8.262,3.947,8.262,4.316v1.761
+		c0,0.346,0.025,0.465,0.047,0.532C8.355,6.749,8.454,6.83,8.581,6.83z M3.617,9.91h0.72H4.48v0.147v4.704h0.904v-4.704V9.91h0.142
+		h0.723V8.99H3.617V9.91z M7.892,13.105c0,0.521-0.015,0.65-0.027,0.705c-0.031,0.135-0.139,0.217-0.291,0.217
+		c-0.145,0-0.25-0.078-0.284-0.207c-0.015-0.055-0.031-0.184-0.031-0.68v-2.757H6.403v3.004c0,0.396,0.006,0.66,0.018,0.79
+		c0.012,0.119,0.043,0.237,0.091,0.348c0.043,0.1,0.108,0.177,0.199,0.236c0.088,0.061,0.205,0.09,0.346,0.09
+		c0.121,0,0.226-0.031,0.318-0.094c0.095-0.064,0.178-0.166,0.246-0.301l0.271,0.066L7.88,14.766h0.868v-4.383H7.893L7.892,13.105z
+		 M11.678,10.605c-0.047-0.093-0.115-0.162-0.205-0.215c-0.093-0.053-0.207-0.078-0.338-0.078c-0.11,0-0.209,0.027-0.304,0.086
+		c-0.097,0.062-0.188,0.153-0.27,0.281L10.3,11.082v-0.486V8.991H9.444v5.771h0.808l0.05-0.257l0.07-0.358l0.19,0.308
+		c0.084,0.138,0.177,0.239,0.275,0.306c0.093,0.062,0.19,0.094,0.296,0.094c0.15,0,0.276-0.053,0.386-0.156
+		c0.115-0.112,0.186-0.237,0.217-0.389c0.034-0.168,0.051-0.434,0.051-0.416v-2.291c0,0.01,0.034-0.228-0.017-0.701
+		C11.761,10.803,11.73,10.706,11.678,10.605z M10.933,13.148c0,0.41-0.021,0.535-0.038,0.6c-0.04,0.141-0.141,0.223-0.277,0.223
+		c-0.132,0-0.233-0.078-0.275-0.215c-0.02-0.062-0.042-0.184-0.042-0.559v-1.161c0-0.39,0.02-0.507,0.038-0.563
+		c0.039-0.129,0.141-0.207,0.272-0.207c0.135,0,0.237,0.082,0.28,0.221c0.019,0.061,0.044,0.183,0.044,0.551v1.111L10.933,13.148
+		L10.933,13.148z M13.272,12.702h0.143h1.335v-0.476c0-0.431-0.04-0.925-0.119-1.156c-0.075-0.223-0.202-0.395-0.389-0.528
+		c-0.181-0.128-0.419-0.195-0.706-0.195c-0.233,0-0.441,0.054-0.618,0.163s-0.3,0.262-0.378,0.469
+		c-0.082,0.215-0.125,0.521-0.125,1.064v1.345c0,0.173,0.02,0.429,0.056,0.597c0.036,0.162,0.101,0.312,0.193,0.447
+		c0.087,0.127,0.214,0.23,0.374,0.305c0.164,0.076,0.358,0.115,0.576,0.115c0.223,0,0.409-0.039,0.551-0.113
+		c0.142-0.075,0.26-0.19,0.354-0.342c0.098-0.158,0.161-0.309,0.187-0.445c0.028-0.143,0.042-0.355,0.042-0.631v-0.205h-0.796v0.472
+		c0,0.25-0.017,0.413-0.052,0.511c-0.049,0.133-0.162,0.211-0.309,0.211c-0.129,0-0.229-0.064-0.274-0.179
+		c-0.022-0.054-0.047-0.151-0.047-0.452v-0.838v-0.138h0.002L13.272,12.702z M13.272,12.087v-0.495c0-0.364,0.019-0.309,0.035-0.358
+		c0.038-0.117,0.141-0.186,0.284-0.186c0.128,0,0.226,0.075,0.265,0.203c0.016,0.052,0.036,0.002,0.036,0.341v0.495v0.139h-0.143
+		h-0.333h-0.143C13.273,12.226,13.272,12.087,13.272,12.087z"/>
+			</symbol>
+			<symbol viewBox="0 0 637.1 637.1" id="shape-cross">
+				<path d="M353.9,318.6l283.2,283.2l-35.4,35.4L318.6,353.9L35.4,637.1L0,601.7l283.2-283.2L0,35.4L35.4,0l283.2,283.2L601.7,0
+				l35.4,35.4L353.9,318.6z"></path>
+			</symbol>
+
+			<symbol viewBox="0 0 900 145.8" id="shape-arrow">
+				<path d="M900,63.6H35.5L86,13.1L72.9,0L0,72.9l0,0L0,73l72.9,72.8L86,132.7L35.4,82.2H900V63.6z"></path>
+			</symbol>
+
+
+		</svg>
+
+		<div id="main" class="main" data-view="home">
+			<aside class="menu">
+				<div class="menu-left">
+					<div class="menu-panel" style="opacity: 0; transform: translate(-100%, 0%) matrix(1, 0, 0, 1, 0, 0);">
+						<div class="menu-content">
+							<nav class="menu-nav">
+								<!-- <a href="#landing-wrapper" class="do-transition do-toggle-menu nav-item active do-track-event" data-view="home" data-category="Menu Navigation" data-action="Click" data-label="Home" style="opacity: 0;">
+									Home
+									<span class="nav-item-hover"></span>
+									<span class="nav-item-hover2"></span>
+								</a> -->
+								<a href="#about-wrapper" class="do-transition do-toggle-menu nav-item do-track-event" data-view="approach" data-category="Menu Navigation" data-action="Click" data-label="Approach" style="opacity: 0;">
+									About
+									<span class="nav-item-hover"></span>
+									<span class="nav-item-hover2"></span>
+								</a>
+								<a href="#events-wrapper" class="do-transition do-toggle-menu nav-item do-track-event" data-view="work" data-category="Menu Navigation" data-action="Click" data-label="Work" style="opacity: 0;">
+									Events
+									<span class="nav-item-hover"></span>
+									<span class="nav-item-hover2"></span>
+								</a>
+								<a href="#speakers-wrapper" class="do-transition do-toggle-menu nav-item do-track-event" data-view="about" data-category="Menu Navigation" data-action="Click" data-label="About" style="opacity: 0;">
+									Past Speakers
+									<span class="nav-item-hover"></span>
+									<span class="nav-item-hover2"></span>
+								</a>
+								<a href="#paper-project-wrapper" class="do-transition do-toggle-menu nav-item do-track-event" data-view="bites" data-category="Menu Navigation" data-action="Click" data-label="Bites" style="opacity: 0;">
+									Papers & Projects
+									<span class="nav-item-hover"></span>
+									<span class="nav-item-hover2"></span>
+								</a>
+								<a href="http://bits-apogee.org/2017/portal/ca" class="do-transition do-toggle-menu nav-item do-track-event" data-view="bites" data-category="Menu Navigation" data-action="Click" data-label="Bites" style="opacity: 0;" target="_blank">
+									Campus Ambassador
+									<span class="nav-item-hover"></span>
+									<span class="nav-item-hover2"></span>
+								</a>
+								<a href="#prev-sponsors-wrapper" class="do-transition do-toggle-menu nav-item do-track-event" data-view="contact" data-category="Menu Navigation" data-action="Click" data-label="Contact" style="opacity: 0;">
+									Last Year's Sponsors
+									<span class="nav-item-hover"></span>
+									<span class="nav-item-hover2"></span>
+								</a>
+								<a href="#pre-register-wrapper" class="do-transition do-toggle-menu nav-item do-track-event" data-view="contact" data-category="Menu Navigation" data-action="Click" data-label="Contact" style="opacity: 0;">
+									Pre Register
+									<span class="nav-item-hover"></span>
+									<span class="nav-item-hover2"></span>
+								</a>
+								<a href="#contacts-wrapper" class="do-transition do-toggle-menu nav-item do-track-event" data-view="contact" data-category="Menu Navigation" data-action="Click" data-label="Contact" style="opacity: 0;">
+									Contacts
+									<span class="nav-item-hover"></span>
+									<span class="nav-item-hover2"></span>
+								</a>
+							</nav>
+
+							<div class="menu-social">
+								<a href="https://twitter.com/bitsapogee" target="_blank" class="ms-link do-track-event" data-category="Social Links" data-action="Click" data-label="Twitter - Menu">
+									<svg class="shape-twitter">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-twitter"></use>
+									</svg>
+								</a>
+								<a href="https://www.facebook.com/bitsapogee" target="_blank" class="ms-link do-track-event" data-category="Social Links" data-action="Click" data-label="Facebook - Menu">
+									<svg class="shape-facebook">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-facebook"></use>
+									</svg>
+								</a>
+								<a href="https://www.instagram.com/bitsapogee/" target="_blank" class="ms-link do-track-event" data-category="Social Links" data-action="Click" data-label="Instagram - Menu">
+									<svg class="shape-instagram">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-instagram"></use>
+									</svg>
+								</a>
+								<a href="https://www.youtube.com/channel/UCVNdvREqZmsi473SqqP6sRg" target="_blank" class="ms-link do-track-event" data-category="Social Links" data-action="Click" data-label="Youtube - Menu">
+									<svg class="shape-youtube">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-youtube"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu-right small-hidden">
+					<div class="menu-panel" style="opacity: 0; transform: translate(100%, 0%) matrix(1, 0, 0, 1, 0, 0);">
+						<div class="quote menu-content">
+
+							<p class="quote-copy init do-toggle-quote" data-quote="1">I went over the heads of the things a man reckons desirable. No doubt invisibility made it possible to get them, but it made it impossible to enjoy them when they are got.</p>
+							<p class="quote-author init do-toggle-quote" data-quote="1"> - H. G. Wells</p>
+
+							<p class="quote-copy do-toggle-quote" data-quote="2">Science, my lad, is made up of mistakes, but they are mistakes which it is useful to make, because they lead little by little to the truth.</p>
+							<p class="quote-author do-toggle-quote" data-quote="2"> - Jules Verne</p>
+
+							<p class="quote-copy do-toggle-quote" data-quote="3">With school turning out more runners, jumpers, racers, tinkerers, grabbers, snatchers, fliers, and swimmers instead of examiners, critics, knowers, and imaginative creators, the word 'intellectual', of course, became the swear word it deserved to be.</p>
+							<p class="quote-author do-toggle-quote" data-quote="3"> - Ray Bradbury</p>
+
+							<p class="quote-copy do-toggle-quote" data-quote="4">People assume that time is a strict progression of cause to effect, but *actually* from a non-linear, non-subjective viewpoint - it's more like a big ball of wibbly wobbly... time-y wimey... stuff.</p>
+							<p class="quote-author do-toggle-quote" data-quote="4"> - Steven Moffat</p>
+
+							<p class="quote-copy do-toggle-quote" data-quote="5">Television won’t be able to hold on to any market it captures after the first six months. People will soon get tired of staring at a plywood box every night.</p>
+							<p class="quote-author do-toggle-quote" data-quote="5"> - Darryl Zanuck,</p>
+
+							<p class="quote-copy do-toggle-quote" data-quote="6">Before man reaches the moon, your mail will be delivered within hours from New York to Australia by guided missiles.  We stand on the threshold of rocket mail.</p>
+							<p class="quote-author do-toggle-quote" data-quote="6"> - Arthur Summerfield, U.S. Postmaster General.</p>
+
+							<!-- <p class="quote-copy do-toggle-quote" data-quote="2">Play is the highest form of&nbsp;research.</p>
+							<p class="quote-author do-toggle-quote" data-quote="2">Albert Einstein</p>
+
+							<p class="quote-copy do-toggle-quote" data-quote="3">The art challenges the technology and the technology inspires the&nbsp;art.</p>
+							<p class="quote-author do-toggle-quote" data-quote="3">John Lasseter</p> -->
+						</div>
+					</div>
+				</div>
+			</aside>
+			<header class="header">
+ <!--  <nav class="header-nav small-hidden" style="display: block; opacity: 1;">
+    <a href="approach.html" class="do-transition hn-item do-track-event" data-view="approach" data-category="Header Navigation" data-action="Click" data-label="Approach">Approach</a>
+   
+</nav> -->
+
+<a href="#" class="do-transition do-track-event logo-wrap" data-category="Header Navigation" data-action="Click" data-label="Home">
+	<div class="header-title">
+		<img src="{% static 'intro/img/logo.png' %}" alt="">
+		<!-- <span class="copy"></span>
+		<svg class="shape-logo">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-logo"></use>
+		</svg> -->
+	</div>
+</a>
+
+<button type="button" class="hamburger-wrapper do-toggle-menu">
+	<span class="hamburger">&nbsp;</span>
+</button>
+</header>
+
+
+<!-- <div class="section" id="landing-wrapper"> </div> -->
+<div class="section" id="about-wrapper" style="display: none"> 
+	<div id="about-apogee">
+		<div class="left-pane">
+			<div class="about-content-wrap">
+				<div class="about-heading">
+					<h1>Apogee 2017</h1>
+				</div>
+				<div class="about-content">		
+					<p>Birla Institute of Technology and Science, Pilani is one of the most prestigious institutes in the country. Over years, BITS Pilani has maintained the reputation of imparting the right mix of education and experience that form the basis for achieving success in the world.<br><br>Apogee, the technical festival of BITS Pilani, is a large scale event that has attracted the connoisseurs of engineering and technology over years. It represents the zenith of science and engineering in a landscape of future visionaries and scientists.</p>
+					<!-- <p style="padding-top:20px;">
+						<a href="http://bits-apogee.org/campusambassador/" style="color:#2D2D2D" target="_blank"><b>Click Here</b></a> to know the Campus Ambassador Internship Program for APOGEE 2017.  		
+					</p> -->
+				</div>
+				<div class="enter-site view-more" href="#about-retrofuture">
+				<div class="btn-bg "></div>
+				<span style="z-index: 1;">View More</span>
+			</div>
+			</div>
+
+		</div>
+		<div class="right-pane">
+			<div class="about-image-wrap"> </div>
+
+		</div>
+	</div>
+	<div id="about-retrofuture">
+		<div class="left-pane">
+			<div class="about-image-wrap"> </div>
+		</div>
+		<div class="right-pane">
+			<div class="about-content-wrap">
+				<div class="about-heading">
+					<h1>Retrofuture</h1>
+				</div>
+				<div class="about-content">		
+					<p>Retrofuturism is an exploration of the themes of tension between the new and old, between the alienating and empowering effects of technology. It might be best described as the act or tendency of an artist to progress by moving backwards, focussing on the futurist visions of eras past. Futurism was born out of humanity's reaction to a sudden thrust into technological revolution. To the many that witnessed the rapid change, it seemed technological utopia was fast approaching. This unbridled optimism caused the collective imagination to run wild. </p>
+					<p style="padding-top:20px;">
+						Retrofuturism is a prescriptive art - it fails to define a specific type of art or artist. Instead what it does is more valuable: it describes possible work, and it is then up to the cultural worker to go out and make it. Although many of these visions seem almost comical now, the spirit in which they were created is part of the reason you are currently looking into a glowing rectangle with unlimited, instant access to the sum of all human knowledge.
+					</p>
+				</div>
+
+			</div>
+			
+			
+		</div>
+
+	</div>
+</div>
+
+<div class="section" id="events-wrapper"> 
+	<div class="wrapper">
+		<section class="container">
+			<div class="grid-half left service">
+				<ul id="type-1"> 
+					<li class="small-thumb hidden" style="display: none">
+						<a href="#">
+							<div class="flip-front">
+							<img src alt="">
+							<p class='event-name'></p>
+							<p class='event-details'></p>
+								<!-- <div class="service-icon">
+									<img src="{% static 'intro/img/events/service-icon-1.png' %}" alt="service" class="retinaImg" style="width: 65px;">
+								</div>
+								<h2 class="grid-title event-name">Lorem Ipsum</h2>
+								<p class="event-details" style="display:none"></p> -->
+							</div>
+						</a>
+					</li>
+				</ul>
+				<div class="clearfix"></div>
+				<ul id="type-2"> </ul>
+				<div class="clearfix"></div>
+
+			</div>
+			<div class="grid-half right">
+				<div class="large-grid" id="event-info">
+					<div class="flip-front">
+						<p class="largest-font">EVENTS</p>
+						<div class="event-logo-wrap">	
+							<img src="{% static 'intro/img/logo.png' %}" alt="">
+						</div>
+					</div>
+
+					<div class="flip-back">
+							<p class="largest-font event-name"></p>
+							<br><br>
+						<p class="large-description-back event-details">
+						</p>
+						<!-- <a href="">
+							<div class="large-button">
+								<span>GET MORE INFO</span>
+							</div>
+						</a> -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="clearfix"> </div>
+		<section class="container">
+			<div class="grid-half left service">
+				<ul id="type-3"> 
+				</ul>
+			</div>
+			<div class="grid-half right service" style="height: auto !important;">
+					<ul id="type-4"> 
+					</ul>
+					</div>
+		</section>
+		<div class="clearfix"> </div>
+
+	</div>
+</div>
+
+
+<div class="section" id="speakers-wrapper">
+	<div id="page-container">
+		<section class="page" id="home-page" dstyle="visibility: visible;">
+			<ul id="home-projects">
+				<li class="home-projects__item " style="display: none">
+					<div class="home-projects__title" style="visibility: inherit; opacity: 1;">
+						<div class="home-projects__title__left-line" ></div>
+						<a class="home-projects__title__inner" ></a>
+						<div class="home-projects__title__right-line" ></div>
+					</div>
+					<div class="home-projects__image-wrapper" >
+						<a class="home-projects__image-wrapper__link"  >
+							<span class="home-projects__image-wrapper__ratio" >
+							<img class="home-projects__image home-projects__image--portrait lazyautosizes lazyloaded" src="" width="889" height="1200" >
+							</span>
+							<img class="home-projects__image mobile-image home-projects__image--portrait lazyautosizes lazyloaded" src="" width="889" height="1200" style="visibility: hidden;">
+						</a>
+					</div>
+					<div class="home-projects__color-wrapper" >
+						<div class="home-projects__color" >
+							<div class="content-wrap">
+
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+</div>
+<div class="section" id="paper-project-wrapper">
+	<div class="pp-container">
+		<div class="pp-row row">
+			<img class="attached-image ai1" src="{% static 'intro/img/papers/paper.svg' %}">
+			<div class="text1">
+				<div class="title t1"></div>
+				<div class="info i1">
+
+				</div>
+				<div class="link l1">
+					<a href="http://bits-apogee.org/2017/portal/" target="_blank">Click Here to Know More</a>
+				</div>
+			</div>
+		</div>
+		<br clear="all">
+		<br>
+		<div class="pp-row row">
+			<img class="attached-image ai2" src="{% static 'intro/img/papers/projects.svg' %}">
+			<div class="text2">
+				<div class="title t2"></div>
+				<div class="info i2">
+
+				</div>
+				<div class="link l2">
+					<a href="http://bits-apogee.org/2017/portal/" target="_blank">Click Here to Know More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section" id="prev-sponsors-wrapper">
+
+	<div class="sponsors-container">
+		
+	</div>
+	
+ </div>
+<div class="section" id="pre-register-wrapper"> 
+
+	<div class="inner-wrapper">
+		<div class="reg-content">
+			<h4>Fill in the form to pre-register for APOGEE 2017 and stay notified with the latest updates.</h4>
+		</div>
+		<div class="reg-form">	
+			<h3 class="message"></h3>
+			<form>
+				<div class="form-group">      
+					<label>Full Name</label>
+					<input id="name" type="text" required="">
+				</div>
+				<div class="form-group">      
+					<label>College</label>
+					<input id="college" type="text" required="">
+				</div>
+				<div class="form-group">    
+				<div class="long-name">
+					<label>Phone Number</label>
+				</div>  
+					<input id="phone" type="phone" required="">
+				</div>
+				<div class="form-group">      
+					<label>Email</label>
+					<input id="email" type="text" required="">
+				</div>
+				<div class="form-group">     
+				<div class="long-name">
+
+					<label >How did know about APOGEE?</label>
+					</div>
+					<input id="about_apogee" list="list" type="text" >
+					<datalist id="list">
+					 <option value="Social Media">Social Media</option>
+					 <option value="From Apogee Team">From Apogee Team</option>
+					 <option value="Email">Email</option>
+					 <option value="From Faculty">From Faculty</option>
+					 <option value="Posters">Posters</option>
+					 <option value="Others">Others</option>
+					 <option value="Fest Info Websites">Fest Info Websites</option>
+					 </datalist>
+					 </input>
+				</div>
+				<div class="enter-site view-more" href="#about-retrofuture" id="submit">
+				<div class="btn-bg "></div>
+				<span style="z-index: 1;">SUBMIT</span>
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div class="section" id="contacts-wrapper"> 
+	<div class="c_container">
+		<div class="c_box">
+			<div class="c_element" style="display: none">
+				<!-- <div class="c_dep"></div> -->
+				<div class="c_info">
+					<div class="c_e_u"><img src=""></div>
+					<div class="c_e_i" id="c1">
+						<img src="" alt="">
+					</div>
+					<div class="c_e_m"></div>
+					<div class="c_e_l">
+						<br>
+						<br>
+						<br>
+						<br>
+						<h1 class="dept_name"></h1>
+						<h2 class="c_name"></h2>
+						<p class="c_phone"></p>
+						<p class="c_email"></p>
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+</div>
+</div>
+
+<script>
+(function(d,s,id){
+		var js,fjs=d.getElementsByTagName(s)[0];
+		if(!d.getElementById(id)){
+			js=d.createElement(s);
+			js.id=id;js.src="https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js,fjs);
+		}
+	}(document,"script","twitter-wjs"));
+
+(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id))
+			return;
+		js = d.createElement(s);
+		js.id = id;
+		js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script src="{% static 'intro/js/speakers/main.js' %}"></script>
+<script src="{% static 'intro/js/landing.js' %}"></script>
+<script src="{% static 'intro/js/nav-script.js' %}"></script>
+<script src="{% static 'intro/js/speakers/modernizr-custom.min.js' %}"></script>
+<script src="{% static 'intro/js/papers.js' %}"></script>
+		<script src="{% static 'intro/js/script.js' %}"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9546354-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body></html>

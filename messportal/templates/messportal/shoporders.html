@@ -1,0 +1,174 @@
+{% extends "regsoft/base.html" %}
+{% block body %}
+    
+
+ 
+
+
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="/static/regsoft/img/sidebar-4.jpg">  
+    
+    <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+       <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#" class="simple-text">
+                    <strong>Controls</strong>
+                </a>
+            </div>
+                       
+            <ul class="nav">
+                <li>
+                    <a href="{% url 'messportal:home' %}">
+                        <i class="pe-7s-home"></i> 
+                        <p>HOME</p>
+                    </a>            
+                </li>
+                <li>
+                    <a href="{% url 'messportal:profshow' %}">
+                        <i class="pe-7s-home"></i> 
+                        <p>Prof Shows / Workshops</p>
+                    </a>            
+                </li>
+                <li>
+                    <a href="{% url 'messportal:bills' %}">
+                        <i class="pe-7s-news-paper"></i> 
+                        <p>bill LIST</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="{% url 'messportal:profshow bill list' %}">
+                        <i class="pe-7s-news-paper"></i> 
+                        <p>Profshow bill LIST</p>
+                    </a>
+                </li>
+            </ul> 
+        </div>
+    </div>
+
+    
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">    
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><strong>Mess Portal</strong></a>
+                </div>
+                <div class="collapse navbar-collapse">       
+                    <ul class="nav navbar-nav navbar-left">
+                    </ul>
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">
+                                Log out
+                            </a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+<script type= 'text/javascript'>
+function checkall(gauss){
+  var cbx = document.getElementsByTagName('input');
+  for(var i=0; i< cbx.length ; ++i)
+  {
+    if(cbx[i].type == 'checkbox')
+      cbx[i].checked = gauss.checked;
+
+  }
+}
+
+</script>
+                     
+       <div class="content">
+            <div class="container-fluid">
+                <div class="row">                                        
+
+                    
+                    <div class="col-md-12">
+                        <div class="card card-plain">
+                            <div class="header">
+                                <h4 class="title">Bills</h4>
+                                <p class="category">Following are the list of receipts generated</p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <th>S.no</th>
+                                        <th>Buyer's Email</th>
+                                        <th>Quantity</th>
+                                        <th>Item</th>
+					<th>UniqueID</th>
+					<th>Item Price</th>
+					<th>Color</th>
+					<th>Size</th>
+                                    </thead>
+                                    <tbody>
+                                        <form method= "POST" action = '../bill_delete/' id ="form1">
+                                            {% csrf_token %}                        
+                                        </form>
+                                        {% for row in rows %}
+                                        <tr>
+                                            <td>{{forloop.counter}}</td>
+                                            <td>{{row.order.email}}</td>
+                                            <td>{{row.order.quantity}} </td>
+                                            <td>{{row.item.name}}</td>
+                                            <td>{{row.order.uniqueid}}</td>
+					    <td>{{row.item.price}}</td>
+                                            <td>{{row.order.color.name}}</td>
+                                            <td>{{row.order.size.size}}</td>
+                                            <td>{{row.bill.date}}</td>
+                                            <td>{{row.bill.amount}}</td>
+                                            <td>{{row.bill.created_by}}</td>
+                                        </tr>
+                                        {% endfor  %}
+                                       
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div> 
+                    
+
+
+
+
+                                 
+                </div>                    
+            </div>
+        </div>
+
+
+
+
+        <!-- FOOTER FOR THE PAGE -->
+        
+        <footer class="footer">
+            <div class="copyright container-fluid">
+
+                    <p class="pull-left">
+                &copy; 2017 <a >Department of Visual Media</a>   
+                </p>
+
+
+                <p class="pull-right">
+                    For any queries contact : 9953108361 / 8233772837
+                </p>
+            </div>
+        </footer>
+        
+        
+    </div>   
+</div>
+{% endblock body %}
+
+

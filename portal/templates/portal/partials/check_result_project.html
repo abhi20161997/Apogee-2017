@@ -1,0 +1,103 @@
+<div class="col-md-6 col-sm-10 col-md-offset-3 col-sm-offset-1 form-wrapper">
+	{% if status == 1 %}
+	<div class="review-project-header">
+		<div class="ref-num-holder">REFERENCE : #{{stub}}</div>
+        {% if round == '1' %}
+		<div class="status-holder" style="color:#B51B21;">Abstract Not selected</div>
+        {% elif round == '2' %}
+        <div class="status-holder">Abstract Selected</div>
+        {% elif round == '3' %}
+        <div class="status-holder">Prototype Selected for APOGEE Presentation</div>
+        {% endif %}
+	</div>
+    <form id="project-abstract-form">
+    	<div class="row">
+    		<div class="col-xs-12 form-subhead">
+				NAME OF THE PROJECT
+			</div>		
+			<div class="input-field  no-label col-sm-12">
+         		{{title}}
+        	</div>
+		
+    		<div class="col-xs-12 form-subhead">
+    			TEAM LEADER 
+    		</div>
+    		<div class="input-field no-label col-sm-6">
+         		<b>{{tl.name}}</b>
+        	</div>
+        	<div class="input-field no-label col-sm-12">
+         		{{tl.email}}, +91 {{tl.phone}}
+        	</div>
+
+        	<div class="col-xs-12 form-subhead">
+    			MEMBERS 
+    		</div>
+    		{% for member in members %}
+    		<div class="input-field no-label col-sm-12">
+         		<b>{{forloop.counter}}. {{member.name}}</b>, {{member.email}}, +91 {{member.phone}}
+        	</div>
+        	<br>
+        	{% endfor %}
+           
+
+            <div class="col-xs-12 form-subhead">
+    			COLLEGE 
+    		</div>
+    		<div class="input-field no-label col-sm-12">
+         		{{tl.college}}
+        	</div>
+
+        	
+            <div class="col-xs-6 form-subhead">
+    			CATEGORY 
+    		</div>
+    		
+            <div class="col-xs-6 form-subhead">
+    			ASSOCIATION 
+    		</div>
+    		
+            <div class=" no-label col-sm-6">
+         		{{category}}
+        	</div>
+    		
+            <div class=" no-label col-sm-6">
+         		{{assoc}}
+        	</div>
+        	<!--
+        	<div class="col-xs-6 form-subhead">
+    			ABSTRACT 
+    		</div>
+        	<div class=" input-field no-label col-sm-12">
+        		{{abstract}}
+        	</div>
+        	-->
+
+            {% if round == '2' or round == '3' %}
+            <div class=" no-label col-sm-6">
+            <button class=" blue darken-2 waves-light btn btn-edit-project" style="margin-top:15px;">Edit Members</button>
+            </div>
+            {% endif %}
+    	</div>     
+    </form> 
+    {% else %}
+    Invalid Reference number. 
+    {% endif %}         
+</div>
+<script type="text/javascript">
+    $('.btn-edit-project').click(function(e){
+        e.preventDefault();
+        $.ajax({
+            url : 'projects/edit/',
+            method : 'GET',
+            data : status_query,
+            headers : {
+                "X-CSRFToken" : getCookie('csrftoken')
+            },
+            success : function(data) {
+                $(".body-box").html(data);
+                open_body_box();
+            }
+        }); 
+    });
+</script>
+
